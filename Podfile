@@ -7,7 +7,8 @@ target 'luckyApp' do
 
   # Pods for luckyApp
   pod 'SwiftLint'
-  
+  pod 'Alamofire', '~> 5.2'
+
   target 'luckyAppTests' do
     inherit! :search_paths
     # Pods for testing
