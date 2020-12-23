@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class OffresViewController: UIViewController, StoryboardBased {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
