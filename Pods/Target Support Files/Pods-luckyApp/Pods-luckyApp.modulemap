@@ -1,0 +1,6 @@
+framework module Pods_luckyApp {
+  umbrella header "Pods-luckyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
