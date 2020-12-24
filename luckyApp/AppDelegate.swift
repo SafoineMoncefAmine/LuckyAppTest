@@ -14,7 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let mainVC = OffresViewController.instanciateInNavigationController()
+        let mainVC = OffresViewController.instanciate()
+        mainVC.viewModel = OffresViewModel()
         self.window?.rootViewController = mainVC
         window?.makeKeyAndVisible()
         return true

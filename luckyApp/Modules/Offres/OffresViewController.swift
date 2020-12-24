@@ -8,16 +8,10 @@
 import UIKit
 
 class OffresViewController: UIViewController, StoryboardBased {
-    let service = LuckyService()
+    
+    var viewModel: OffresViewModel!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        service.offres { result in
-            switch result {
-            case .success(let offers):
-                print(offers)
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 }

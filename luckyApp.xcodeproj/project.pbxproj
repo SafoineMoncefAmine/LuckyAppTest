@@ -19,6 +19,10 @@
 		675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48622593FEAF006B1888 /* LuckyRouter.swift */; };
 		675B486825940895006B1888 /* LuckyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B486725940895006B1888 /* LuckyService.swift */; };
 		675B486D25940F06006B1888 /* Offres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B486C25940F06006B1888 /* Offres.swift */; };
+		675B48732594C404006B1888 /* OffresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48722594C404006B1888 /* OffresViewModel.swift */; };
+		675B48C3259531B2006B1888 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48C1259531B2006B1888 /* OfferCollectionViewCell.swift */; };
+		675B48C4259531B2006B1888 /* OfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B48C2259531B2006B1888 /* OfferCollectionViewCell.xib */; };
+		675B48CE25962614006B1888 /* OfferMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48CD25962614006B1888 /* OfferMetaData.swift */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 		DE51BC8F01016161B04C128A /* Pods_luckyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CBC70D1941EB4CA540943 /* Pods_luckyAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +67,10 @@
 		675B48622593FEAF006B1888 /* LuckyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyRouter.swift; sourceTree = "<group>"; };
 		675B486725940895006B1888 /* LuckyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyService.swift; sourceTree = "<group>"; };
 		675B486C25940F06006B1888 /* Offres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offres.swift; sourceTree = "<group>"; };
+		675B48722594C404006B1888 /* OffresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffresViewModel.swift; sourceTree = "<group>"; };
+		675B48C1259531B2006B1888 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
+		675B48C2259531B2006B1888 /* OfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCollectionViewCell.xib; sourceTree = "<group>"; };
+		675B48CD25962614006B1888 /* OfferMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferMetaData.swift; sourceTree = "<group>"; };
 		7C12ADBCBCC4BBC1592DEBF9 /* Pods-luckyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-luckyAppTests/Pods-luckyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8733E616D4A1934CAD423D87 /* Pods-luckyApp-luckyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp-luckyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,10 +244,38 @@
 		675B48592593FA1B006B1888 /* Offres */ = {
 			isa = PBXGroup;
 			children = (
-				675B47CD2593DF83006B1888 /* OffresViewController.storyboard */,
 				675B47CB2593DF83006B1888 /* OffresViewController.swift */,
+				675B47CD2593DF83006B1888 /* OffresViewController.storyboard */,
+				675B48712594C3BA006B1888 /* ViewModel */,
+				675B48C0259513C2006B1888 /* Views */,
 			);
 			path = Offres;
+			sourceTree = "<group>";
+		};
+		675B48712594C3BA006B1888 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				675B48CC2596260A006B1888 /* Data */,
+				675B48722594C404006B1888 /* OffresViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		675B48C0259513C2006B1888 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				675B48C1259531B2006B1888 /* OfferCollectionViewCell.swift */,
+				675B48C2259531B2006B1888 /* OfferCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		675B48CC2596260A006B1888 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				675B48CD25962614006B1888 /* OfferMetaData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		7A76977E2AFE58C4BF16D896 /* Frameworks */ = {
@@ -375,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				675B47D42593DF85006B1888 /* LaunchScreen.storyboard in Resources */,
+				675B48C4259531B2006B1888 /* OfferCollectionViewCell.xib in Resources */,
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
 				675B47CF2593DF83006B1888 /* OffresViewController.storyboard in Resources */,
 			);
@@ -521,12 +558,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				675B48732594C404006B1888 /* OffresViewModel.swift in Sources */,
+				675B48C3259531B2006B1888 /* OfferCollectionViewCell.swift in Sources */,
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
 				675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */,
 				675B486D25940F06006B1888 /* Offres.swift in Sources */,
 				675B486825940895006B1888 /* LuckyService.swift in Sources */,
 				675B48492593F45D006B1888 /* StoryboardBased.swift in Sources */,
 				675B47C82593DF83006B1888 /* AppDelegate.swift in Sources */,
+				675B48CE25962614006B1888 /* OfferMetaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
