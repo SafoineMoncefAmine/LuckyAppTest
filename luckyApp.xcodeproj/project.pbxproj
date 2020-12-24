@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		675B47DF2593DF85006B1888 /* luckyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B47DE2593DF85006B1888 /* luckyAppTests.swift */; };
 		675B47EA2593DF85006B1888 /* luckyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B47E92593DF85006B1888 /* luckyAppUITests.swift */; };
 		675B48492593F45D006B1888 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48482593F45D006B1888 /* StoryboardBased.swift */; };
+		675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48622593FEAF006B1888 /* LuckyRouter.swift */; };
+		675B486825940895006B1888 /* LuckyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B486725940895006B1888 /* LuckyService.swift */; };
+		675B486D25940F06006B1888 /* Offres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B486C25940F06006B1888 /* Offres.swift */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 		DE51BC8F01016161B04C128A /* Pods_luckyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CBC70D1941EB4CA540943 /* Pods_luckyAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +60,9 @@
 		675B47E92593DF85006B1888 /* luckyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luckyAppUITests.swift; sourceTree = "<group>"; };
 		675B47EB2593DF85006B1888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		675B48482593F45D006B1888 /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
+		675B48622593FEAF006B1888 /* LuckyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyRouter.swift; sourceTree = "<group>"; };
+		675B486725940895006B1888 /* LuckyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyService.swift; sourceTree = "<group>"; };
+		675B486C25940F06006B1888 /* Offres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offres.swift; sourceTree = "<group>"; };
 		7C12ADBCBCC4BBC1592DEBF9 /* Pods-luckyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-luckyAppTests/Pods-luckyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8733E616D4A1934CAD423D87 /* Pods-luckyApp-luckyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp-luckyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +170,7 @@
 		675B48082593E147006B1888 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				675B486C25940F06006B1888 /* Offres.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +195,8 @@
 		675B480B2593E161006B1888 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				675B48622593FEAF006B1888 /* LuckyRouter.swift */,
+				675B486725940895006B1888 /* LuckyService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 				675B47C12593DF83006B1888 /* Frameworks */,
 				675B47C22593DF83006B1888 /* Resources */,
 				675B48432593E8F5006B1888 /* ShellScript */,
+				9D93853036AB86D94ECC69C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,6 +315,7 @@
 				675B47E12593DF85006B1888 /* Sources */,
 				675B47E22593DF85006B1888 /* Frameworks */,
 				675B47E32593DF85006B1888 /* Resources */,
+				71C26296638BA74F02B49D05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,6 +436,23 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		71C26296638BA74F02B49D05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7929AC10C3AFCE58BE54A73A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +473,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D93853036AB86D94ECC69C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luckyApp/Pods-luckyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-luckyApp/Pods-luckyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-luckyApp/Pods-luckyApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B6EFD781590606FBBBA4C58B /* [CP] Check Pods Manifest.lock */ = {
@@ -477,6 +522,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
+				675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */,
+				675B486D25940F06006B1888 /* Offres.swift in Sources */,
+				675B486825940895006B1888 /* LuckyService.swift in Sources */,
 				675B48492593F45D006B1888 /* StoryboardBased.swift in Sources */,
 				675B47C82593DF83006B1888 /* AppDelegate.swift in Sources */,
 			);
