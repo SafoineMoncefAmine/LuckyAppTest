@@ -28,6 +28,7 @@ class OffresViewController: UIViewController, StoryboardBased {
         self.configure()
         self.setuUI()
         self.navigationController?.navigationBar.topItem?.title = AppText.offers_title.value()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.viewModel.loadOffres { (offers) in
             self.data = offers
             self.tableView.reloadData()
