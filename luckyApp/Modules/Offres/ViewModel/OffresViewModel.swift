@@ -55,7 +55,7 @@ class OffresViewModel {
             let title = item.brand
             let description = item.title
             let tag = item.tags ?? ""
-            let favoriteCount = "\(item.favoriteCount)"
+            let favoriteCount = item.favoriteCount.shortPresentation()
             let favIcon = AppImage.ic_favorited
             items.append(OfferCellMetaData(imageUrl: itemUrl,
                                            title: title,
