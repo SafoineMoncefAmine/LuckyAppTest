@@ -20,8 +20,6 @@
 		675B486825940895006B1888 /* LuckyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B486725940895006B1888 /* LuckyService.swift */; };
 		675B486D25940F06006B1888 /* Offres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B486C25940F06006B1888 /* Offres.swift */; };
 		675B48732594C404006B1888 /* OffresViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48722594C404006B1888 /* OffresViewModel.swift */; };
-		675B48C3259531B2006B1888 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48C1259531B2006B1888 /* OfferCollectionViewCell.swift */; };
-		675B48C4259531B2006B1888 /* OfferCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B48C2259531B2006B1888 /* OfferCollectionViewCell.xib */; };
 		675B48CE25962614006B1888 /* OfferCellMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48CD25962614006B1888 /* OfferCellMetaData.swift */; };
 		675B48D7259627DD006B1888 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48D6259627DD006B1888 /* AppColors.swift */; };
 		675B48DC25962EEB006B1888 /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48DB25962EEB006B1888 /* AppImage.swift */; };
@@ -31,6 +29,9 @@
 		675B48FE259636F8006B1888 /* OfferMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48FD259636F8006B1888 /* OfferMetaData.swift */; };
 		675B4903259655CD006B1888 /* UICollectionView+LuckyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B4902259655CD006B1888 /* UICollectionView+LuckyApp.swift */; };
 		675B490825965AC4006B1888 /* NSObject+LuckyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B490725965AC4006B1888 /* NSObject+LuckyApp.swift */; };
+		675B49272596771E006B1888 /* UITableView+LuckyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49262596771E006B1888 /* UITableView+LuckyApp.swift */; };
+		675B493025967910006B1888 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B492E25967910006B1888 /* OfferTableViewCell.swift */; };
+		675B493125967910006B1888 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B492F25967910006B1888 /* OfferTableViewCell.xib */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 		DE51BC8F01016161B04C128A /* Pods_luckyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CBC70D1941EB4CA540943 /* Pods_luckyAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,8 +77,6 @@
 		675B486725940895006B1888 /* LuckyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyService.swift; sourceTree = "<group>"; };
 		675B486C25940F06006B1888 /* Offres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offres.swift; sourceTree = "<group>"; };
 		675B48722594C404006B1888 /* OffresViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffresViewModel.swift; sourceTree = "<group>"; };
-		675B48C1259531B2006B1888 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
-		675B48C2259531B2006B1888 /* OfferCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCollectionViewCell.xib; sourceTree = "<group>"; };
 		675B48CD25962614006B1888 /* OfferCellMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellMetaData.swift; sourceTree = "<group>"; };
 		675B48D6259627DD006B1888 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		675B48DB25962EEB006B1888 /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
@@ -87,6 +86,9 @@
 		675B48FD259636F8006B1888 /* OfferMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferMetaData.swift; sourceTree = "<group>"; };
 		675B4902259655CD006B1888 /* UICollectionView+LuckyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+LuckyApp.swift"; sourceTree = "<group>"; };
 		675B490725965AC4006B1888 /* NSObject+LuckyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LuckyApp.swift"; sourceTree = "<group>"; };
+		675B49262596771E006B1888 /* UITableView+LuckyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+LuckyApp.swift"; sourceTree = "<group>"; };
+		675B492E25967910006B1888 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		675B492F25967910006B1888 /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		7C12ADBCBCC4BBC1592DEBF9 /* Pods-luckyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-luckyAppTests/Pods-luckyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8733E616D4A1934CAD423D87 /* Pods-luckyApp-luckyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp-luckyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,8 +285,8 @@
 		675B48C0259513C2006B1888 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				675B48C1259531B2006B1888 /* OfferCollectionViewCell.swift */,
-				675B48C2259531B2006B1888 /* OfferCollectionViewCell.xib */,
+				675B492E25967910006B1888 /* OfferTableViewCell.swift */,
+				675B492F25967910006B1888 /* OfferTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +316,7 @@
 				675B48E925963271006B1888 /* String+LuckyApp.swift */,
 				675B4902259655CD006B1888 /* UICollectionView+LuckyApp.swift */,
 				675B490725965AC4006B1888 /* NSObject+LuckyApp.swift */,
+				675B49262596771E006B1888 /* UITableView+LuckyApp.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -460,8 +463,8 @@
 			files = (
 				675B48F32596339C006B1888 /* Localizable.strings in Resources */,
 				675B47D42593DF85006B1888 /* LaunchScreen.storyboard in Resources */,
-				675B48C4259531B2006B1888 /* OfferCollectionViewCell.xib in Resources */,
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
+				675B493125967910006B1888 /* OfferTableViewCell.xib in Resources */,
 				675B47CF2593DF83006B1888 /* OffresViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,7 +611,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				675B48732594C404006B1888 /* OffresViewModel.swift in Sources */,
-				675B48C3259531B2006B1888 /* OfferCollectionViewCell.swift in Sources */,
 				675B48E4259631CA006B1888 /* AppText.swift in Sources */,
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
 				675B48D7259627DD006B1888 /* AppColors.swift in Sources */,
@@ -618,6 +620,8 @@
 				675B486825940895006B1888 /* LuckyService.swift in Sources */,
 				675B48DC25962EEB006B1888 /* AppImage.swift in Sources */,
 				675B48492593F45D006B1888 /* StoryboardBased.swift in Sources */,
+				675B49272596771E006B1888 /* UITableView+LuckyApp.swift in Sources */,
+				675B493025967910006B1888 /* OfferTableViewCell.swift in Sources */,
 				675B47C82593DF83006B1888 /* AppDelegate.swift in Sources */,
 				675B48EA25963271006B1888 /* String+LuckyApp.swift in Sources */,
 				675B48CE25962614006B1888 /* OfferCellMetaData.swift in Sources */,

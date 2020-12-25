@@ -11,7 +11,7 @@ class OffresViewController: UIViewController, StoryboardBased {
     
     // MARK: Properties - Outlets
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties - public
     
@@ -25,23 +25,25 @@ class OffresViewController: UIViewController, StoryboardBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.dataSource = self
-        self.collectionView.registerCell(name: OfferCollectionViewCell.className)
+        self.tableView.dataSource = self
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.registerCell(name: OfferTableViewCell.className)
         self.viewModel.loadOffres { (offers) in
             self.data = offers
-            self.collectionView.reloadData()
+            self.tableView.reloadData()
         }
     }
 }
 
-extension OffresViewController: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+extension OffresViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         guard let data = self.data else {return 0}
         return data.sections.count + 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let data = self.data else {return 0}
         if section == 0 {
             return 0
@@ -50,28 +52,26 @@ extension OffresViewController: UICollectionViewDataSource {
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OfferCollectionViewCell.className, for: indexPath) as? OfferCollectionViewCell else { return UICollectionViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
             let cellData = self.data?.sections[0].items[0]
             cell.data = cellData
             return cell
         } else {
-            let cellData = self.data?.sections[0].items[0]
-            return self.collectionView(collectionView, offerViewCellForRowAt: indexPath, with: cellData)
+            let cellData = self.data?.sections[indexPath.section - 1].items[indexPath.row]
+            return self.tableView(tableView, offerViewCellForRowAt: indexPath, with: cellData)
         }
     }
+        private func tableView(_ tableView: UITableView, topHeader indexPath: IndexPath, with data: OfferCellMetaData) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
+            cell.data = data
+            return cell
+        }
     
-    private func collectionView(_ collectionView: UICollectionView, topHeader indexPath: IndexPath, with data: OfferCellMetaData) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OfferCollectionViewCell.className, for: indexPath) as? OfferCollectionViewCell else { return UICollectionViewCell() }
-        let cellData = self.data?.sections[0].items[0]
-        cell.data = cellData
-        return cell
-    }
-    
-    private func collectionView(_ collectionView: UICollectionView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OfferCollectionViewCell.className, for: indexPath) as? OfferCollectionViewCell else { return UICollectionViewCell() }
-        cell.data = data
-        return cell
-    }
+        private func tableView(_ tableView: UITableView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
+            cell.data = data
+            return cell
+        }
 }

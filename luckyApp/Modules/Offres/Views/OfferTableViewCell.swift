@@ -1,14 +1,14 @@
 //
-//  OfferCollectionViewCell.swift
+//  OfferTableViewCell.swift
 //  luckyApp
 //
-//  Created by Safoine Moncef Amine on 24/12/2020.
+//  Created by Safoine Moncef Amine on 25/12/2020.
 //
 
 import UIKit
 
-class OfferCollectionViewCell: UICollectionViewCell {
-    
+class OfferTableViewCell: UITableViewCell {
+
     // MARK: - Properties - Outlets
     
     @IBOutlet private weak var offerImageView: UIImageView!
