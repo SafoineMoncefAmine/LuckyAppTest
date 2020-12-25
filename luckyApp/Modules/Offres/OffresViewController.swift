@@ -26,7 +26,7 @@ class OffresViewController: UIViewController, StoryboardBased {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
-        self.tableView.estimatedRowHeight = 300
+        self.tableView.estimatedRowHeight = 120
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.registerCell(name: OfferTableViewCell.className)
         self.viewModel.loadOffres { (offers) in
