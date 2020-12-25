@@ -25,14 +25,23 @@ class OffresViewController: UIViewController, StoryboardBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.dataSource = self
-        self.tableView.estimatedRowHeight = 120
-        self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.registerCell(name: OfferTableViewCell.className)
+        self.configure()
+        self.setuUI()
         self.viewModel.loadOffres { (offers) in
             self.data = offers
             self.tableView.reloadData()
         }
+    }
+    
+    // MARK: Methodes -
+    
+    private func setuUI() {
+        self.tableView.separatorStyle = .none
+    }
+    
+    private func configure() {
+        self.tableView.dataSource = self
+        self.tableView.registerCell(name: OfferTableViewCell.className)
     }
 }
 
