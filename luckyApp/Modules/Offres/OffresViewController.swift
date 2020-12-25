@@ -27,16 +27,18 @@ class OffresViewController: UIViewController, StoryboardBased {
         super.viewDidLoad()
         self.configure()
         self.setuUI()
+        self.navigationController?.navigationBar.topItem?.title = AppText.offers_title.value()
         self.viewModel.loadOffres { (offers) in
             self.data = offers
             self.tableView.reloadData()
         }
     }
     
-    // MARK: Methodes -
+    // MARK: Methodes - Handlers
     
     private func setuUI() {
         self.tableView.separatorStyle = .none
+        self.navigationController?.navigationBar.backgroundColor = AppColor.grayscale200.value()
     }
     
     private func configure() {

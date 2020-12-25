@@ -52,7 +52,7 @@ class OfferTableViewCell: UITableViewCell {
         self.topLabel.font = AppFont.sfProText.value(size: 10)
         
         self.centerLabel.textColor = AppColor.grayscale800.value()
-        self.centerLabel.numberOfLines = 0
+        self.centerLabel.numberOfLines = 2
         self.centerLabel.font = AppFont.sfProText.value(size: 16)
         
         self.bottomLabel.textColor = AppColor.grayscale600.value()

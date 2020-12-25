@@ -11,7 +11,7 @@ public enum AppText: String {
     
     // MARK: NavBar
     
-    case offers_count_K, offers_count_description
+    case offers_title, offers_count_K, offers_count_description
     
     public func value() -> String {
         return self.rawValue.localized

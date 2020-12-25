@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainVC = OffresViewController.instanciate()
         mainVC.viewModel = OffresViewModel()
-        self.window?.rootViewController = mainVC
+        self.window?.rootViewController = UINavigationController(rootViewController: mainVC)
         window?.makeKeyAndVisible()
         return true
     }

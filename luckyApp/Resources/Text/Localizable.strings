@@ -10,7 +10,7 @@
 
 "offers_count_K" = "K";
 "offers_count_description" = "offers";
-
+"offers_title" = "Offers";
 // MARK: - Offer Details
 
 "offer_details_price" = "Price";
