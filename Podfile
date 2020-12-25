@@ -6,16 +6,8 @@ target 'luckyApp' do
   use_frameworks!
 
   # Pods for luckyApp
-  pod 'SwiftLint'
+  pod 'SwiftLint', '~> 0.42.0'
   pod 'Alamofire', '~> 5.2'
-
-  target 'luckyAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'luckyAppUITests' do
-    # Pods for testing
-  end
+  pod 'SDWebImage', '~> 5.0'
 
 end
