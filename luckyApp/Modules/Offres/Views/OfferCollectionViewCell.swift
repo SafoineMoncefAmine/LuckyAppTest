@@ -21,7 +21,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties - public
     
-    var data: OfferMetaData? {
+    var data: OfferCellMetaData? {
         didSet {
             self.affectData()
         }
@@ -35,7 +35,7 @@ class OfferCollectionViewCell: UICollectionViewCell {
         self.topLabel.text = data.title
         self.centerLabel.text = data.description
         self.bottomLabel.text = data.tag
-        self.favIconImageView.image = UIImage(named: data.favoritesIcon)
+        self.favIconImageView.image = data.favoritesIcon.value()
         self.favLabel.text = "\(data.favoritesCount)"
     }
 }

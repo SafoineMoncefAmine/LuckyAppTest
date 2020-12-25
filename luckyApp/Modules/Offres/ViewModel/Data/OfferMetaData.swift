@@ -5,13 +5,14 @@
 //  Created by Safoine Moncef Amine on 25/12/2020.
 //
 
-import UIKit
+import Foundation
 
 struct OfferMetaData {
-    let imageUrl: URL
+    enum Status {
+        case quiet, loading, finish
+    }
+    let status: Status
     let title: String
-    let description: String
-    let tag: String
-    let favoritesIcon: String
-    let favoritesCount: String
+    let offersCount: String
+    let sections: [String: [OfferCellMetaData]] // here the Key represents Section Title
 }

@@ -13,5 +13,8 @@ class OffresViewController: UIViewController, StoryboardBased {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.loadOffres { (offers) in
+            print(offers)
+        }
     }
 }
