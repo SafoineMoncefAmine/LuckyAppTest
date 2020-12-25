@@ -42,10 +42,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Wk-m5-P1a" secondAttribute="trailing" id="AcK-Up-HQr"/>
+                            <constraint firstAttribute="trailing" secondItem="4Wk-m5-P1a" secondAttribute="trailing" id="AcK-Up-HQr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Wk-m5-P1a" secondAttribute="bottom" id="H3f-UI-Wro"/>
                             <constraint firstItem="4Wk-m5-P1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jae-Wp-AvO"/>
-                            <constraint firstItem="4Wk-m5-P1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r8i-jC-2tI"/>
+                            <constraint firstItem="4Wk-m5-P1a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r8i-jC-2tI"/>
                         </constraints>
                     </view>
                     <connections>

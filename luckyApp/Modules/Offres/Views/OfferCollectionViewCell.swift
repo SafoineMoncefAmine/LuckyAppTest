@@ -27,7 +27,14 @@ class OfferCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    // MARK: Methodes - Handlers
+    // MARK: - Methodes - lifecycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setupUI()
+    }
+    
+    // MARK: - Methodes - Handlers
     
     private func affectData() {
         guard let data = self.data else { return }
@@ -37,5 +44,16 @@ class OfferCollectionViewCell: UICollectionViewCell {
         self.bottomLabel.text = data.tag
         self.favIconImageView.image = data.favoritesIcon.value()
         self.favLabel.text = "\(data.favoritesCount)"
+        
+    }
+    
+    func setupUI() {
+        self.topLabel.textColor = AppColor.grayscale600.value()
+        
+        self.centerLabel.textColor = AppColor.grayscale800.value()
+        self.centerLabel.numberOfLines = 0
+        
+        self.bottomLabel.textColor = AppColor.grayscale600.value()
+        
     }
 }

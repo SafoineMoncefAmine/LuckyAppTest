@@ -57,10 +57,8 @@ extension OffresViewController: UICollectionViewDataSource {
             cell.data = cellData
             return cell
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OfferCollectionViewCell.className, for: indexPath) as? OfferCollectionViewCell else { return UICollectionViewCell() }
             let cellData = self.data?.sections[0].items[0]
-            cell.data = cellData
-            return cell
+            return self.collectionView(collectionView, offerViewCellForRowAt: indexPath, with: cellData)
         }
     }
     
@@ -71,10 +69,9 @@ extension OffresViewController: UICollectionViewDataSource {
         return cell
     }
     
-    private func collectionView(_ collectionView: UICollectionView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData) -> UICollectionViewCell {
+    private func collectionView(_ collectionView: UICollectionView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OfferCollectionViewCell.className, for: indexPath) as? OfferCollectionViewCell else { return UICollectionViewCell() }
-        let cellData = self.data?.sections[0].items[0]
-        cell.data = cellData
+        cell.data = data
         return cell
     }
 }
