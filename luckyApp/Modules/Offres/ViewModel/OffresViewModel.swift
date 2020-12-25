@@ -31,14 +31,14 @@ class OffresViewModel {
     private func buildOfferMetaData(offers: Offers) -> OfferMetaData {
         let offersCountDescription: String
         let offerTitle: String
-        var offerSections: [String: [OfferCellMetaData]]
+        var offerSections: [OfferSectionMetaData]
         
         offersCountDescription = "\(offers.sections.reduce(0, {$0 + $1.items.count})) " + AppText.offers_count_description.value()
         offerTitle = offers.title
-        offerSections = [:]
+        offerSections = []
         
         for section in offers.sections {
-            offerSections[section.title] = buildOfferCellMetaData(from: section)
+            offerSections.append(buildOfferCellMetaData(from: section))
         }
         
         return OfferMetaData(status: .finish,
@@ -47,7 +47,7 @@ class OffresViewModel {
                              sections: offerSections)
     }
     
-    private func buildOfferCellMetaData(from section: Section) -> [OfferCellMetaData] {
+    private func buildOfferCellMetaData(from section: Section) -> OfferSectionMetaData {
         var items: [OfferCellMetaData] = []
         
         for item in section.items {
@@ -64,6 +64,6 @@ class OffresViewModel {
                                            favoritesIcon: favIcon,
                                            favoritesCount: favoriteCount))
         }
-        return items
+        return OfferSectionMetaData(title: section.title, items: items)
     }
 }

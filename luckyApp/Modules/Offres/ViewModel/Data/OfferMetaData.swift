@@ -14,5 +14,10 @@ struct OfferMetaData {
     let status: Status
     let title: String
     let offersCount: String
-    let sections: [String: [OfferCellMetaData]] // here the Key represents Section Title
+    let sections: [OfferSectionMetaData] // here the Key represents Section Title
+}
+
+struct OfferSectionMetaData {
+    let title: String
+    let items: [OfferCellMetaData]
 }
