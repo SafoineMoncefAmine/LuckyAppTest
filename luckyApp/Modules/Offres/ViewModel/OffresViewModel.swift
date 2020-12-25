@@ -51,7 +51,7 @@ class OffresViewModel {
         var items: [OfferCellMetaData] = []
         
         for item in section.items {
-            let itemUrl = URL(string: item.imageURL)
+            let itemUrl = URL(string: item.imageURL.replacingOccurrences(of: "w=1125&h=750", with: "w=120&h=80")) // this is a bad practice normally we must get w=1125&h=750 from the server or we get URL without it and we set it from front
             let title = item.brand
             let description = item.title
             let tag = item.tags ?? ""

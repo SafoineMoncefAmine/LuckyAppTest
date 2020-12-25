@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class OfferTableViewCell: UITableViewCell {
 
@@ -44,7 +45,7 @@ class OfferTableViewCell: UITableViewCell {
         self.bottomLabel.text = data.tag
         self.favIconImageView.image = data.favoritesIcon.value()
         self.favLabel.text = "\(data.favoritesCount)"
-        
+        self.imageView?.sd_setImage(with: data.imageUrl, completed: nil)
     }
     
     func setupUI() {
@@ -60,5 +61,8 @@ class OfferTableViewCell: UITableViewCell {
         
         self.favLabel.textColor = AppColor.grayscale600.value()
         self.favLabel.font = AppFont.sfProTextRegular.value(size: 10)
+        
+        self.imageView?.contentMode = .scaleAspectFit
+        self.imageView?.layer.cornerRadius = 2
     }
 }
