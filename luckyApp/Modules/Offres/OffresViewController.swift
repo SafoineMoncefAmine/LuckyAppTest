@@ -44,6 +44,7 @@ class OffresViewController: UIViewController, StoryboardBased {
     private func configure() {
         self.tableView.dataSource = self
         self.tableView.registerCell(name: OfferTableViewCell.className)
+        self.tableView.registerCell(name: TopHeaderTableViewCell.className)
     }
 }
 
@@ -57,7 +58,7 @@ extension OffresViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let data = self.data else {return 0}
         if section == 0 {
-            return 0
+            return 1
         } else {
             return data.sections[section - 1].items.count
         }
@@ -65,17 +66,14 @@ extension OffresViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
-            let cellData = self.data?.sections[0].items[0]
-            cell.data = cellData
-            return cell
+            return self.tableView(tableView, topHeaderCellForRowAt: indexPath, with: self.data?.offersCount)
         } else {
             let cellData = self.data?.sections[indexPath.section - 1].items[indexPath.row]
             return self.tableView(tableView, offerViewCellForRowAt: indexPath, with: cellData)
         }
     }
-        private func tableView(_ tableView: UITableView, topHeader indexPath: IndexPath, with data: OfferCellMetaData) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
+        private func tableView(_ tableView: UITableView, topHeaderCellForRowAt indexPath: IndexPath, with data: String?) -> UITableViewCell {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TopHeaderTableViewCell.className, for: indexPath) as? TopHeaderTableViewCell else { return UITableViewCell() }
             cell.data = data
             return cell
         }
