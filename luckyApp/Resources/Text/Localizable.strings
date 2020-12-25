@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  luckyApp
+
+  Created by Safoine Moncef Amine on 25/12/2020.
+  
+*/
+
+// MARK: - Offers
+
+"offers_count_K" = "K";
+"offers_count_description" = "offers";
+
+// MARK: - Offer Details
+
+"offer_details_price" = "Price";
+"offer_details_redemptions" = "REDEMPTIONS CAP: ";

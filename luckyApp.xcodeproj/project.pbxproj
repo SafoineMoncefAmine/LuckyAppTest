@@ -25,6 +25,9 @@
 		675B48CE25962614006B1888 /* OfferMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48CD25962614006B1888 /* OfferMetaData.swift */; };
 		675B48D7259627DD006B1888 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48D6259627DD006B1888 /* AppColors.swift */; };
 		675B48DC25962EEB006B1888 /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48DB25962EEB006B1888 /* AppImage.swift */; };
+		675B48E4259631CA006B1888 /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48E3259631CA006B1888 /* AppText.swift */; };
+		675B48EA25963271006B1888 /* String+LuckyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B48E925963271006B1888 /* String+LuckyApp.swift */; };
+		675B48F32596339C006B1888 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 675B48F22596339C006B1888 /* Localizable.strings */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 		DE51BC8F01016161B04C128A /* Pods_luckyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CBC70D1941EB4CA540943 /* Pods_luckyAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,9 @@
 		675B48CD25962614006B1888 /* OfferMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferMetaData.swift; sourceTree = "<group>"; };
 		675B48D6259627DD006B1888 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		675B48DB25962EEB006B1888 /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		675B48E3259631CA006B1888 /* AppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppText.swift; sourceTree = "<group>"; };
+		675B48E925963271006B1888 /* String+LuckyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LuckyApp.swift"; sourceTree = "<group>"; };
+		675B48F22596339C006B1888 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7C12ADBCBCC4BBC1592DEBF9 /* Pods-luckyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-luckyAppTests/Pods-luckyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8733E616D4A1934CAD423D87 /* Pods-luckyApp-luckyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp-luckyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,7 @@
 			children = (
 				675B47C72593DF83006B1888 /* AppDelegate.swift */,
 				675B48002593E05F006B1888 /* Common */,
+				675B481D2593E36A006B1888 /* LaunchScreen */,
 				675B48072593E13E006B1888 /* Managers */,
 				675B48082593E147006B1888 /* Models */,
 				675B48092593E14E006B1888 /* Modules */,
@@ -167,8 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				675B48D5259627B4006B1888 /* Constants */,
+				675B48E82596324B006B1888 /* extensions */,
 				675B48472593F001006B1888 /* Protocols */,
-				675B481D2593E36A006B1888 /* LaunchScreen */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -201,6 +208,7 @@
 			children = (
 				675B480D2593E1AB006B1888 /* Images */,
 				675B480C2593E195006B1888 /* Info */,
+				675B48F125963380006B1888 /* Text */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -288,8 +296,25 @@
 			children = (
 				675B48D6259627DD006B1888 /* AppColors.swift */,
 				675B48DB25962EEB006B1888 /* AppImage.swift */,
+				675B48E3259631CA006B1888 /* AppText.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		675B48E82596324B006B1888 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				675B48E925963271006B1888 /* String+LuckyApp.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		675B48F125963380006B1888 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				675B48F22596339C006B1888 /* Localizable.strings */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 		7A76977E2AFE58C4BF16D896 /* Frameworks */ = {
@@ -424,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				675B48F32596339C006B1888 /* Localizable.strings in Resources */,
 				675B47D42593DF85006B1888 /* LaunchScreen.storyboard in Resources */,
 				675B48C4259531B2006B1888 /* OfferCollectionViewCell.xib in Resources */,
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
@@ -574,6 +600,7 @@
 			files = (
 				675B48732594C404006B1888 /* OffresViewModel.swift in Sources */,
 				675B48C3259531B2006B1888 /* OfferCollectionViewCell.swift in Sources */,
+				675B48E4259631CA006B1888 /* AppText.swift in Sources */,
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
 				675B48D7259627DD006B1888 /* AppColors.swift in Sources */,
 				675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */,
@@ -582,6 +609,7 @@
 				675B48DC25962EEB006B1888 /* AppImage.swift in Sources */,
 				675B48492593F45D006B1888 /* StoryboardBased.swift in Sources */,
 				675B47C82593DF83006B1888 /* AppDelegate.swift in Sources */,
+				675B48EA25963271006B1888 /* String+LuckyApp.swift in Sources */,
 				675B48CE25962614006B1888 /* OfferMetaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
