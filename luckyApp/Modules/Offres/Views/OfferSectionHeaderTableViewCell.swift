@@ -1,5 +1,5 @@
 //
-//  TopHeaderTableViewCell.swift
+//  OfferSectionHeaderTableViewCell.swift
 //  luckyApp
 //
 //  Created by Safoine Moncef Amine on 25/12/2020.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class TopHeaderTableViewCell: UITableViewCell {
+class OfferSectionHeaderTableViewCell: UITableViewCell {
 
     // MARK: Properties - Outlets
     
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: Properties - public
     
@@ -31,11 +31,12 @@ class TopHeaderTableViewCell: UITableViewCell {
     // MARK: - Methodes - Handlers
     
     private func setupUI() {
-        self.titleLabel.textColor = AppColor.grayscale600.value()
-        self.titleLabel.font = AppFont.sfProTextRegular.value(size: 14)
+        self.titleLabel.textColor = AppColor.grayscale800.value()
+        self.titleLabel.font = AppFont.SFProTextMedium.value(size: 24)
     }
     
     private func affectData() {
         self.titleLabel.text = data
     }
+    
 }

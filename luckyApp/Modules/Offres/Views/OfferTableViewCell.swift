@@ -49,16 +49,16 @@ class OfferTableViewCell: UITableViewCell {
     
     func setupUI() {
         self.topLabel.textColor = AppColor.grayscale600.value()
-        self.topLabel.font = AppFont.sfProText.value(size: 10)
+        self.topLabel.font = AppFont.sfProTextRegular.value(size: 10)
         
         self.centerLabel.textColor = AppColor.grayscale800.value()
         self.centerLabel.numberOfLines = 2
-        self.centerLabel.font = AppFont.sfProText.value(size: 16)
+        self.centerLabel.font = AppFont.SFProTextBold.value(size: 16)
         
         self.bottomLabel.textColor = AppColor.grayscale600.value()
-        self.bottomLabel.font = AppFont.sfProText.value(size: 10)
+        self.bottomLabel.font = AppFont.sfProTextRegular.value(size: 10)
         
         self.favLabel.textColor = AppColor.grayscale600.value()
-        self.favLabel.font = AppFont.sfProText.value(size: 10)
+        self.favLabel.font = AppFont.sfProTextRegular.value(size: 10)
     }
 }

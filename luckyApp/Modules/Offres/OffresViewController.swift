@@ -16,7 +16,7 @@ class OffresViewController: UIViewController, StoryboardBased {
     // MARK: Properties - public
     
     var viewModel: OffresViewModel!
-        
+    
     // MARK: Properties - private
     
     var data: OfferMetaData?
@@ -45,11 +45,12 @@ class OffresViewController: UIViewController, StoryboardBased {
         self.tableView.dataSource = self
         self.tableView.registerCell(name: OfferTableViewCell.className)
         self.tableView.registerCell(name: TopHeaderTableViewCell.className)
+        self.tableView.registerCell(name: OfferSectionHeaderTableViewCell.className)
     }
 }
 
 extension OffresViewController: UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let data = self.data else {return 0}
         return data.sections.count + 1
@@ -60,27 +61,37 @@ extension OffresViewController: UITableViewDataSource {
         if section == 0 {
             return 1
         } else {
-            return data.sections[section - 1].items.count
+            return data.sections[section - 1].items.count + 1 // we add 1 for section header
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             return self.tableView(tableView, topHeaderCellForRowAt: indexPath, with: self.data?.offersCount)
+        } else if indexPath.row == 0 {
+            let cellData = self.data?.sections[indexPath.section - 1].title
+            return self.tableView(tableView, sectionHeaderCellForRowAt: indexPath, with: cellData)
         } else {
-            let cellData = self.data?.sections[indexPath.section - 1].items[indexPath.row]
+            let cellData = self.data?.sections[indexPath.section - 1].items[indexPath.row - 1]
             return self.tableView(tableView, offerViewCellForRowAt: indexPath, with: cellData)
         }
     }
-        private func tableView(_ tableView: UITableView, topHeaderCellForRowAt indexPath: IndexPath, with data: String?) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TopHeaderTableViewCell.className, for: indexPath) as? TopHeaderTableViewCell else { return UITableViewCell() }
-            cell.data = data
-            return cell
-        }
     
-        private func tableView(_ tableView: UITableView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
-            cell.data = data
-            return cell
-        }
+    private func tableView(_ tableView: UITableView, topHeaderCellForRowAt indexPath: IndexPath, with data: String?) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TopHeaderTableViewCell.className, for: indexPath) as? TopHeaderTableViewCell else { return UITableViewCell() }
+        cell.data = data
+        return cell
+    }
+    
+    private func tableView(_ tableView: UITableView, sectionHeaderCellForRowAt indexPath: IndexPath, with data: String?) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferSectionHeaderTableViewCell.className, for: indexPath) as? OfferSectionHeaderTableViewCell else { return UITableViewCell() }
+        cell.data = data
+        return cell
+    }
+    
+    private func tableView(_ tableView: UITableView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
+        cell.data = data
+        return cell
+    }
 }

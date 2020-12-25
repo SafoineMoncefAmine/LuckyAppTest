@@ -35,6 +35,10 @@
 		675B4942259684E2006B1888 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B4941259684E2006B1888 /* AppFont.swift */; };
 		675B494825968BE5006B1888 /* TopHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B494625968BE5006B1888 /* TopHeaderTableViewCell.swift */; };
 		675B494925968BE5006B1888 /* TopHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B494725968BE5006B1888 /* TopHeaderTableViewCell.xib */; };
+		675B494F25968F89006B1888 /* OfferSectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B494D25968F89006B1888 /* OfferSectionHeaderTableViewCell.swift */; };
+		675B495025968F89006B1888 /* OfferSectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B494E25968F89006B1888 /* OfferSectionHeaderTableViewCell.xib */; };
+		675B4961259694C3006B1888 /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675B4960259694C3006B1888 /* SFProText-Bold.ttf */; };
+		675B49662596950C006B1888 /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675B49652596950C006B1888 /* SFProText-Medium.ttf */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 		DE51BC8F01016161B04C128A /* Pods_luckyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448CBC70D1941EB4CA540943 /* Pods_luckyAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +99,10 @@
 		675B4941259684E2006B1888 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		675B494625968BE5006B1888 /* TopHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		675B494725968BE5006B1888 /* TopHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		675B494D25968F89006B1888 /* OfferSectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		675B494E25968F89006B1888 /* OfferSectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferSectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		675B4960259694C3006B1888 /* SFProText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.ttf"; sourceTree = "<group>"; };
+		675B49652596950C006B1888 /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
 		7C12ADBCBCC4BBC1592DEBF9 /* Pods-luckyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-luckyAppTests/Pods-luckyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8733E616D4A1934CAD423D87 /* Pods-luckyApp-luckyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp-luckyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-luckyApp-luckyAppUITests/Pods-luckyApp-luckyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +304,8 @@
 				675B492F25967910006B1888 /* OfferTableViewCell.xib */,
 				675B494625968BE5006B1888 /* TopHeaderTableViewCell.swift */,
 				675B494725968BE5006B1888 /* TopHeaderTableViewCell.xib */,
+				675B494D25968F89006B1888 /* OfferSectionHeaderTableViewCell.swift */,
+				675B494E25968F89006B1888 /* OfferSectionHeaderTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +351,8 @@
 		675B493B25968437006B1888 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				675B49652596950C006B1888 /* SFProText-Medium.ttf */,
+				675B4960259694C3006B1888 /* SFProText-Bold.ttf */,
 				675B493C2596846E006B1888 /* SFProText-Regular.ttf */,
 			);
 			path = Font;
@@ -485,6 +497,9 @@
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
 				675B493125967910006B1888 /* OfferTableViewCell.xib in Resources */,
 				675B47CF2593DF83006B1888 /* OffresViewController.storyboard in Resources */,
+				675B4961259694C3006B1888 /* SFProText-Bold.ttf in Resources */,
+				675B495025968F89006B1888 /* OfferSectionHeaderTableViewCell.xib in Resources */,
+				675B49662596950C006B1888 /* SFProText-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +655,7 @@
 				675B494825968BE5006B1888 /* TopHeaderTableViewCell.swift in Sources */,
 				675B48492593F45D006B1888 /* StoryboardBased.swift in Sources */,
 				675B49272596771E006B1888 /* UITableView+LuckyApp.swift in Sources */,
+				675B494F25968F89006B1888 /* OfferSectionHeaderTableViewCell.swift in Sources */,
 				675B493025967910006B1888 /* OfferTableViewCell.swift in Sources */,
 				675B47C82593DF83006B1888 /* AppDelegate.swift in Sources */,
 				675B48EA25963271006B1888 /* String+LuckyApp.swift in Sources */,

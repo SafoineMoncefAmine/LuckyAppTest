@@ -9,14 +9,16 @@ import UIKit
 
 public enum AppFont: String {
         
-    case sfProText = "SFProText-Regular"
+    case sfProTextRegular = "SFProText-Regular"
+    case SFProTextBold = "SFProText-Bold"
+    case SFProTextMedium = "SFProText-Medium"
     
     // MARK: Methods - internal - utilities
     
     public func value(size: Int = 17) -> UIFont {
         guard let customFont = UIFont(name: self.rawValue, size: CGFloat(size)) else {
             fatalError("""
-                Failed to load the "CustomFont-Light" font.
+                Failed to load the "\(self.rawValue)" font.
                 Make sure the font file is included in the project and the font name is spelled correctly.
                 """
             )
