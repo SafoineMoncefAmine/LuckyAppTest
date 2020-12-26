@@ -11,9 +11,15 @@ class OffresViewModel {
     
     // MARK: Properties - private
     
-    private let service = LuckyService()
+    private let service: OffersServiceProtocol
     
-    // MARK: Methodes
+    // MARK: Methodes - inits
+    
+    init(service: OffersServiceProtocol) {
+        self.service = service
+    }
+    
+    // MARK: Methodes - Loaders
     
     func loadOffres(completion: @escaping (OfferMetaData) -> Void) {
         self.service.offres { [weak self] (result) in
@@ -28,6 +34,8 @@ class OffresViewModel {
         }
     }
     
+    // MARK: - Methodes - Handlers
+    
     private func buildOfferMetaData(offers: Offers) -> OfferMetaData {
         let offersCountDescription: String
         let offerTitle: String
@@ -41,8 +49,7 @@ class OffresViewModel {
             offerSections.append(buildOfferCellMetaData(from: section))
         }
         
-        return OfferMetaData(status: .finish,
-                             title: offerTitle,
+        return OfferMetaData(title: offerTitle,
                              offersCount: offersCountDescription,
                              sections: offerSections)
     }

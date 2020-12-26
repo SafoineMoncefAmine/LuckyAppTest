@@ -107,7 +107,6 @@ extension OffresViewController: UITableViewDataSource {
 
 extension OffresViewController: OfferTableViewCellDelegate {
     func didSelectItem() {
-        print("Tapped")
         let offerDetailsVC = OfferDetailsViewController.instanciate()
         self.navigationController?.pushViewController(offerDetailsVC, animated: true)
     }

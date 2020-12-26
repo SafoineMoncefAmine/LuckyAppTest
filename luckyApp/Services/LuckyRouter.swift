@@ -8,7 +8,10 @@
 import Alamofire
 
 enum LuckyRouter: URLRequestConvertible {
+    
     case offers
+    case offerDetails(id: Int)
+    
     private struct Constant {
         static let baseURL = "https://www.nasable.com/luckytest/api"
     }
@@ -42,6 +45,8 @@ extension LuckyRouter {
         switch self {
         case .offers:
             return "/offers"
+        case .offerDetails(let id):
+            return "/offers/\(id)"
         }
     }
 }
@@ -52,7 +57,7 @@ extension LuckyRouter {
     
     var parameters: [String: Any] {
         switch self {
-        case .offers:
+        case .offers, .offerDetails:
             return [:]
         }
     }
@@ -64,7 +69,7 @@ extension LuckyRouter {
     
     var headers: [String: String] {
         switch self {
-        case .offers:
+        case .offers, .offerDetails:
             return [:]
         }
     }
@@ -75,7 +80,7 @@ extension LuckyRouter {
 extension LuckyRouter {
     var method: HTTPMethod {
         switch self {
-        case .offers:
+        case .offers, .offerDetails:
             return .get
         }
     }
@@ -86,7 +91,7 @@ extension LuckyRouter {
 extension LuckyRouter {
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .offers:
+        case .offers, .offerDetails:
             return URLEncoding.default
         }
     }

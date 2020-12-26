@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainVC = OffresViewController.instanciate()
-        mainVC.viewModel = OffresViewModel()
+        mainVC.viewModel = OffresViewModel(service: LuckyService.shared)
         self.window?.rootViewController = UINavigationController(rootViewController: mainVC)
         window?.makeKeyAndVisible()
         return true
