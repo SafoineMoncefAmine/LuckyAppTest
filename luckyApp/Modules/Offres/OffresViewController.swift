@@ -28,8 +28,7 @@ class OffresViewController: UIViewController, StoryboardBased {
         log.info()
         self.setupTableView()
         self.setupUI()
-        self.navigationController?.navigationBar.topItem?.title = AppText.offers_title.value()
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.setupNavigationController()
         self.viewModel.loadOffres { (offers) in
             self.data = offers
             self.tableView.reloadData()
@@ -53,6 +52,11 @@ class OffresViewController: UIViewController, StoryboardBased {
         self.tableView.registerCell(name: OfferTableViewCell.className)
         self.tableView.registerCell(name: TopHeaderTableViewCell.className)
         self.tableView.registerCell(name: OfferSectionHeaderTableViewCell.className)
+    }
+    
+    private func setupNavigationController() {
+        self.navigationController?.navigationBar.topItem?.title = AppText.offers_title.value()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
@@ -104,6 +108,7 @@ extension OffresViewController: UITableViewDataSource {
     private func tableView(_ tableView: UITableView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
         cell.data = data
+        cell.selectionStyle = .none
         return cell
     }
 }
