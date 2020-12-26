@@ -45,6 +45,7 @@
 		675B49A425978D57006B1888 /* LuckyServiceProtocoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49A325978D57006B1888 /* LuckyServiceProtocoles.swift */; };
 		675B49A92597928E006B1888 /* OfferDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49A82597928E006B1888 /* OfferDetails.swift */; };
 		675B49AF2597931F006B1888 /* OfferDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */; };
+		675B49B52597983B006B1888 /* OfferDetailsMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		675B49A325978D57006B1888 /* LuckyServiceProtocoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyServiceProtocoles.swift; sourceTree = "<group>"; };
 		675B49A82597928E006B1888 /* OfferDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetails.swift; sourceTree = "<group>"; };
 		675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewModel.swift; sourceTree = "<group>"; };
+		675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsMetaData.swift; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B30C59909BD742A340174C /* Pods-luckyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp.debug.xcconfig"; path = "Target Support Files/Pods-luckyApp/Pods-luckyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -373,6 +375,7 @@
 				675B49962596B401006B1888 /* OfferDetailsViewController.storyboard */,
 				675B499B2596B42F006B1888 /* OfferDetailsViewController.swift */,
 				675B49AD25979306006B1888 /* ViewModel */,
+				675B49BC2597B703006B1888 /* Views */,
 			);
 			path = OfferDetails;
 			sourceTree = "<group>";
@@ -381,8 +384,24 @@
 			isa = PBXGroup;
 			children = (
 				675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */,
+				675B49B325979828006B1888 /* Data */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		675B49B325979828006B1888 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		675B49BC2597B703006B1888 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7A76977E2AFE58C4BF16D896 /* Frameworks */ = {
@@ -604,6 +623,7 @@
 			files = (
 				675B48732594C404006B1888 /* OffresViewModel.swift in Sources */,
 				675B48E4259631CA006B1888 /* AppText.swift in Sources */,
+				675B49B52597983B006B1888 /* OfferDetailsMetaData.swift in Sources */,
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
 				675B48D7259627DD006B1888 /* AppColors.swift in Sources */,
 				675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */,

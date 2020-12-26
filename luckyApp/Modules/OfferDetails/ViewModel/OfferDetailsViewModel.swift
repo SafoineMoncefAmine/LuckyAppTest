@@ -10,17 +10,21 @@ import Foundation
 class OfferDetailsViewModel {
     
     // MARK: Properties - public
+    
     let service: OfferDetailsServiceProtocol
+    var offerID: Int
     
     // MARK: Methodes - inits
-    init(service: OfferDetailsServiceProtocol) {
+    
+    init(offerID: Int, service: OfferDetailsServiceProtocol) {
         self.service = service
+        self.offerID = offerID
     }
     
     // MARK: Methodes - public
     
-    func loadOfferDetails(offerID: Int) {
-        self.service.offreDetails(id: offerID) { (results) in
+    func loadOfferDetails() {
+        self.service.offreDetails(id: self.offerID) { (results) in
             print(results)
         }
     }

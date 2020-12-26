@@ -12,11 +12,13 @@ class OffresViewModel {
     // MARK: Properties - private
     
     private let service: OffersServiceProtocol
+    private var offers: Offers?
     
     // MARK: Methodes - inits
     
     init(service: OffersServiceProtocol) {
         self.service = service
+        self.offers = nil
     }
     
     // MARK: Methodes - Loaders
@@ -26,12 +28,19 @@ class OffresViewModel {
             guard let strongSelf = self else { return }
             switch result {
             case .success(let value):
+                self?.offers = value
                 completion(strongSelf.buildOfferMetaData(offers: value))
             case .failure(let error):
                 print(error)
             }
             
         }
+    }
+    
+    func getIDForItem(section: Int, row: Int) -> Int? {
+        let offerDetailURL = self.offers?.sections[section].items[row].detailURL
+        let idSring = offerDetailURL?.split(separator: "/").last ?? ""
+        return Int(idSring)
     }
     
     // MARK: - Methodes - Handlers
@@ -58,7 +67,7 @@ class OffresViewModel {
         var items: [OfferCellMetaData] = []
         
         for item in section.items {
-            let itemUrl = URL(string: item.imageURL.replacingOccurrences(of: "w=1125&h=750", with: "w=120&h=80")) // this is a bad practice normally we must get w=1125&h=750 from the server or we get URL without it and we set it from front
+            let itemUrl = URL(string: item.imageURL.replacingOccurrences(of: "w=1125&h=750", with: "w=120&h=80")) // this is a bad practice normally we must get w=120&h=80 from the server or we get URL without it and we set it from front
             let title = item.brand
             let description = item.title
             let tag = item.tags ?? ""

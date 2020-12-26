@@ -25,8 +25,8 @@ class OffresViewController: UIViewController, StoryboardBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configure()
-        self.setuUI()
+        self.setupTableView()
+        self.setupUI()
         self.navigationController?.navigationBar.topItem?.title = AppText.offers_title.value()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.viewModel.loadOffres { (offers) in
@@ -37,13 +37,14 @@ class OffresViewController: UIViewController, StoryboardBased {
     
     // MARK: Methodes - Handlers
     
-    private func setuUI() {
+    private func setupUI() {
         self.tableView.separatorStyle = .none
         self.navigationController?.navigationBar.backgroundColor = AppColor.grayscale200.value()
     }
     
-    private func configure() {
+    private func setupTableView() {
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.registerCell(name: OfferTableViewCell.className)
         self.tableView.registerCell(name: TopHeaderTableViewCell.className)
         self.tableView.registerCell(name: OfferSectionHeaderTableViewCell.className)
@@ -98,17 +99,21 @@ extension OffresViewController: UITableViewDataSource {
     private func tableView(_ tableView: UITableView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
         cell.data = data
-        cell.delegate = self
         return cell
     }
 }
 
-// MARK: - OfferTableViewCellDelegate
+// MARK: - UITableViewDelegate
 
-extension OffresViewController: OfferTableViewCellDelegate {
-    func didSelectItem() {
+extension OffresViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section != 0, indexPath.row != 0 else { return }
+        guard let itemID = self.viewModel.getIDForItem(section: indexPath.section - 1, row: indexPath.row - 1) else { // reduce 1 for first cells that represent the headers
+            // TODO: handle case where offerID is nil
+            return
+        }
         let offerDetailsVC = OfferDetailsViewController.instanciate()
-        offerDetailsVC.viewModel = OfferDetailsViewModel(service: LuckyService.shared)
+        offerDetailsVC.viewModel = OfferDetailsViewModel(offerID: itemID, service: LuckyService.shared)
         self.navigationController?.pushViewController(offerDetailsVC, animated: true)
     }
 }

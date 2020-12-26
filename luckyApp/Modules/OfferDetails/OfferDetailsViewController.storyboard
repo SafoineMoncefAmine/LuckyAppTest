@@ -17,20 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OfferDetailsViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkZ-Q0-omE">
-                                <rect key="frame" x="105.5" y="437.5" width="203" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X3M-0w-g6x">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gyf-Pg-GEP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fkZ-Q0-omE" firstAttribute="centerX" secondItem="1wJ-Ep-cc4" secondAttribute="centerX" id="Pey-Ah-6ll"/>
-                            <constraint firstItem="fkZ-Q0-omE" firstAttribute="centerY" secondItem="1wJ-Ep-cc4" secondAttribute="centerY" id="gcu-Qs-oDb"/>
+                            <constraint firstItem="gyf-Pg-GEP" firstAttribute="trailing" secondItem="X3M-0w-g6x" secondAttribute="trailing" id="4cf-BR-w22"/>
+                            <constraint firstItem="X3M-0w-g6x" firstAttribute="top" secondItem="gyf-Pg-GEP" secondAttribute="top" id="Qpv-bp-aeZ"/>
+                            <constraint firstItem="X3M-0w-g6x" firstAttribute="leading" secondItem="gyf-Pg-GEP" secondAttribute="leading" id="eyU-81-lOR"/>
+                            <constraint firstItem="gyf-Pg-GEP" firstAttribute="bottom" secondItem="X3M-0w-g6x" secondAttribute="bottom" id="fQu-8R-bZa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="X3M-0w-g6x" id="ug0-Wa-rdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lp5-zx-9Km" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
