@@ -24,6 +24,7 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
         super.viewDidLoad()
         log.info()
         self.setupTableView()
+        self.setupUI()
         self.viewModel.loadOfferDetails { (data) in
             self.data = data
             self.tableView.reloadData()
@@ -38,6 +39,27 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
         self.tableView.registerCell(name: OfferContentInfosTableViewCell.className)
         self.tableView.registerCell(name: OfferPriceTableViewCell.className)
         self.tableView.registerCell(name: OfferRedemptionsTableViewCell.className)
+    }
+    
+    private func setupUI() {
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        let addFav = UIBarButtonItem(image: AppImage.ic_add_favorite.value(), style: .done, target: self, action: #selector(addToFavorites))
+        let shareFav = UIBarButtonItem(image: AppImage.ic_share.value(), style: .done, target: self, action: #selector(shareAd))
+        navigationItem.rightBarButtonItems = [addFav, shareFav]
+    }
+    
+    // MARK: Methodes - actions
+    
+    @objc private func addToFavorites() {
+        // TODO: this needs to be implimented
+        log.info()
+        print("Ad Added")
+    }
+    
+    @objc private func shareAd() {
+        // TODO: this needs to be implimented
+        log.info()
+        print("Ad Shared")
     }
 }
 
