@@ -33,7 +33,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="axc-0k-fnC">
-                                                <rect key="frame" x="273" y="0.0" width="39" height="9"/>
+                                                <rect key="frame" x="293" y="0.0" width="19" height="9"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tnI-DS-9KY">
                                                         <rect key="frame" x="0.0" y="0.0" width="9" height="9"/>
@@ -43,10 +43,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApA-fk-0TJ">
-                                                        <rect key="frame" x="14" y="0.0" width="25" height="9"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="25" id="b95-bW-Jyq"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="14" y="0.0" width="5" height="9"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

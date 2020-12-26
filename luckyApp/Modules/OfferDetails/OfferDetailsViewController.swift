@@ -22,6 +22,7 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        log.info()
         self.setupTableView()
         self.viewModel.loadOfferDetails { (data) in
             self.data = data

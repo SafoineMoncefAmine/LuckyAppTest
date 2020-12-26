@@ -55,6 +55,7 @@
 		675B49D62597DDB5006B1888 /* OfferPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49D42597DDB5006B1888 /* OfferPriceTableViewCell.xib */; };
 		675B49DC2597E781006B1888 /* OfferRedemptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49DA2597E781006B1888 /* OfferRedemptionsTableViewCell.swift */; };
 		675B49DD2597E781006B1888 /* OfferRedemptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49DB2597E781006B1888 /* OfferRedemptionsTableViewCell.xib */; };
+		675B49EB2597F5EA006B1888 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49EA2597F5EA006B1888 /* LogManager.swift */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		675B49D42597DDB5006B1888 /* OfferPriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferPriceTableViewCell.xib; sourceTree = "<group>"; };
 		675B49DA2597E781006B1888 /* OfferRedemptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRedemptionsTableViewCell.swift; sourceTree = "<group>"; };
 		675B49DB2597E781006B1888 /* OfferRedemptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferRedemptionsTableViewCell.xib; sourceTree = "<group>"; };
+		675B49EA2597F5EA006B1888 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B30C59909BD742A340174C /* Pods-luckyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp.debug.xcconfig"; path = "Target Support Files/Pods-luckyApp/Pods-luckyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +231,7 @@
 		675B48072593E13E006B1888 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				675B49EA2597F5EA006B1888 /* LogManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				675B48732594C404006B1888 /* OffresViewModel.swift in Sources */,
 				675B48E4259631CA006B1888 /* AppText.swift in Sources */,
 				675B49B52597983B006B1888 /* OfferDetailsMetaData.swift in Sources */,
+				675B49EB2597F5EA006B1888 /* LogManager.swift in Sources */,
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
 				675B49C22597C140006B1888 /* OfferImageTableViewCell.swift in Sources */,
 				675B48D7259627DD006B1888 /* AppColors.swift in Sources */,

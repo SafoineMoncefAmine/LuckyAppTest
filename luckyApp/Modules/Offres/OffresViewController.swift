@@ -25,6 +25,7 @@ class OffresViewController: UIViewController, StoryboardBased {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        log.info()
         self.setupTableView()
         self.setupUI()
         self.navigationController?.navigationBar.topItem?.title = AppText.offers_title.value()
