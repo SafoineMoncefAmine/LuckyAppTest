@@ -36,6 +36,7 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
         self.tableView.registerCell(name: OfferImageTableViewCell.className)
         self.tableView.registerCell(name: OfferContentInfosTableViewCell.className)
         self.tableView.registerCell(name: OfferPriceTableViewCell.className)
+        self.tableView.registerCell(name: OfferRedemptionsTableViewCell.className)
     }
 }
 
@@ -43,7 +44,7 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
 
 extension OfferDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,7 +56,10 @@ extension OfferDetailsViewController: UITableViewDataSource {
             return self.tableView(tableView, offerInfosCellForRowAt: indexPath, with: offerInfos)
         } else if indexPath.row == 2 {
             let offerPricesInfos = self.data?.priceData
-            return self.tableView(tableView, offerInfosCellForRowAt: indexPath, with: offerPricesInfos)
+            return self.tableView(tableView, offerPricesInfosCellForRowAt: indexPath, with: offerPricesInfos)
+        } else if indexPath.row == 3  {
+            let redemtionData = self.data?.redemptionText
+            return self.tableView(tableView, redemptionInfosCellForRowAt: indexPath, with: redemtionData)
         } else {
             return UITableViewCell()
         }
@@ -75,8 +79,14 @@ extension OfferDetailsViewController: UITableViewDataSource {
         return cell
     }
     
-    private func tableView(_ tableView: UITableView, offerInfosCellForRowAt indexPath: IndexPath, with data: OfferDetailPriceInfoData?) -> UITableViewCell {
+    private func tableView(_ tableView: UITableView, offerPricesInfosCellForRowAt indexPath: IndexPath, with data: OfferDetailPriceInfoData?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferPriceTableViewCell.className, for: indexPath) as? OfferPriceTableViewCell else { return UITableViewCell() }
+        cell.data = data
+        return cell
+    }
+    
+    private func tableView(_ tableView: UITableView, redemptionInfosCellForRowAt indexPath: IndexPath, with data: String?) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferRedemptionsTableViewCell.className, for: indexPath) as? OfferRedemptionsTableViewCell else { return UITableViewCell() }
         cell.data = data
         return cell
     }

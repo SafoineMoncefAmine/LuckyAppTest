@@ -8,9 +8,10 @@
 import Foundation
 
 struct OfferDetailsMetaData {
-    let imageURL: URL
+    let imageURL: URL?
     let infos: OfferDetailContentInfosData
     let priceData: OfferDetailPriceInfoData
+    let redemptionText: String
 }
 
 struct OfferDetailContentInfosData {
@@ -22,7 +23,6 @@ struct OfferDetailContentInfosData {
 }
 
 struct OfferDetailPriceInfoData {
-    let title: String
     let oldPrice: String
     let newPrice: String
     let expirationDate: String

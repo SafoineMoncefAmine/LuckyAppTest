@@ -36,10 +36,10 @@ class OfferPriceTableViewCell: UITableViewCell {
     
     private func affectData() {
         guard let data = self.data else { return }
-        self.titleLabel.text = data.title
         self.oldPriceLabel.text = data.oldPrice
         self.newPriceLabel.text = data.newPrice
         self.expirationDateLabel.text = data.expirationDate
+        self.titleLabel.attributedText = NSMutableAttributedString(string: AppText.offer_details_price.value(), attributes: [NSAttributedString.Key.kern: 1])
     }
     
     private func setupUI() {

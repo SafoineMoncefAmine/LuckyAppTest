@@ -53,6 +53,8 @@
 		675B49CF2597D74C006B1888 /* SFProText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675B49CE2597D74C006B1888 /* SFProText-Light.ttf */; };
 		675B49D52597DDB5006B1888 /* OfferPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49D32597DDB5006B1888 /* OfferPriceTableViewCell.swift */; };
 		675B49D62597DDB5006B1888 /* OfferPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49D42597DDB5006B1888 /* OfferPriceTableViewCell.xib */; };
+		675B49DC2597E781006B1888 /* OfferRedemptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49DA2597E781006B1888 /* OfferRedemptionsTableViewCell.swift */; };
+		675B49DD2597E781006B1888 /* OfferRedemptionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49DB2597E781006B1888 /* OfferRedemptionsTableViewCell.xib */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		675B49CE2597D74C006B1888 /* SFProText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Light.ttf"; sourceTree = "<group>"; };
 		675B49D32597DDB5006B1888 /* OfferPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPriceTableViewCell.swift; sourceTree = "<group>"; };
 		675B49D42597DDB5006B1888 /* OfferPriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferPriceTableViewCell.xib; sourceTree = "<group>"; };
+		675B49DA2597E781006B1888 /* OfferRedemptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRedemptionsTableViewCell.swift; sourceTree = "<group>"; };
+		675B49DB2597E781006B1888 /* OfferRedemptionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferRedemptionsTableViewCell.xib; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B30C59909BD742A340174C /* Pods-luckyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp.debug.xcconfig"; path = "Target Support Files/Pods-luckyApp/Pods-luckyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -415,12 +419,14 @@
 		675B49BC2597B703006B1888 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */,
-				675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */,
 				675B49C72597CC61006B1888 /* OfferContentInfosTableViewCell.swift */,
 				675B49C82597CC61006B1888 /* OfferContentInfosTableViewCell.xib */,
+				675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */,
+				675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */,
 				675B49D32597DDB5006B1888 /* OfferPriceTableViewCell.swift */,
 				675B49D42597DDB5006B1888 /* OfferPriceTableViewCell.xib */,
+				675B49DA2597E781006B1888 /* OfferRedemptionsTableViewCell.swift */,
+				675B49DB2597E781006B1888 /* OfferRedemptionsTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 				675B48F32596339C006B1888 /* Localizable.strings in Resources */,
 				675B493D2596846E006B1888 /* SFProText-Regular.ttf in Resources */,
 				675B47D42593DF85006B1888 /* LaunchScreen.storyboard in Resources */,
+				675B49DD2597E781006B1888 /* OfferRedemptionsTableViewCell.xib in Resources */,
 				675B494925968BE5006B1888 /* TopHeaderTableViewCell.xib in Resources */,
 				675B49C32597C140006B1888 /* OfferImageTableViewCell.xib in Resources */,
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
@@ -671,6 +678,7 @@
 				675B4942259684E2006B1888 /* AppFont.swift in Sources */,
 				675B48CE25962614006B1888 /* OfferCellMetaData.swift in Sources */,
 				675B490825965AC4006B1888 /* NSObject+LuckyApp.swift in Sources */,
+				675B49DC2597E781006B1888 /* OfferRedemptionsTableViewCell.swift in Sources */,
 				675B49D52597DDB5006B1888 /* OfferPriceTableViewCell.swift in Sources */,
 				675B48FE259636F8006B1888 /* OfferMetaData.swift in Sources */,
 				675B49C92597CC61006B1888 /* OfferContentInfosTableViewCell.swift in Sources */,
