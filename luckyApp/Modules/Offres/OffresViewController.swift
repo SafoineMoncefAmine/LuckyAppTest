@@ -108,6 +108,7 @@ extension OffresViewController: UITableViewDataSource {
 extension OffresViewController: OfferTableViewCellDelegate {
     func didSelectItem() {
         let offerDetailsVC = OfferDetailsViewController.instanciate()
+        offerDetailsVC.viewModel = OfferDetailsViewModel(service: LuckyService.shared)
         self.navigationController?.pushViewController(offerDetailsVC, animated: true)
     }
 }

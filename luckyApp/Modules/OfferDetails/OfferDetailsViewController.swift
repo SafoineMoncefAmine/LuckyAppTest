@@ -9,7 +9,14 @@ import UIKit
 
 class OfferDetailsViewController: UIViewController, StoryboardBased {
 
+    // MARK: Properties - public
+    
+    var viewModel: OfferDetailsViewModel!
+    
+    // MARK: Methodes - life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.loadOfferDetails(offerID: 1)
     }
 }

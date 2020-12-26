@@ -43,6 +43,8 @@
 		675B49972596B401006B1888 /* OfferDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 675B49962596B401006B1888 /* OfferDetailsViewController.storyboard */; };
 		675B499C2596B42F006B1888 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B499B2596B42F006B1888 /* OfferDetailsViewController.swift */; };
 		675B49A425978D57006B1888 /* LuckyServiceProtocoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49A325978D57006B1888 /* LuckyServiceProtocoles.swift */; };
+		675B49A92597928E006B1888 /* OfferDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49A82597928E006B1888 /* OfferDetails.swift */; };
+		675B49AF2597931F006B1888 /* OfferDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,8 @@
 		675B49962596B401006B1888 /* OfferDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfferDetailsViewController.storyboard; sourceTree = "<group>"; };
 		675B499B2596B42F006B1888 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		675B49A325978D57006B1888 /* LuckyServiceProtocoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckyServiceProtocoles.swift; sourceTree = "<group>"; };
+		675B49A82597928E006B1888 /* OfferDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetails.swift; sourceTree = "<group>"; };
+		675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewModel.swift; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B30C59909BD742A340174C /* Pods-luckyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp.debug.xcconfig"; path = "Target Support Files/Pods-luckyApp/Pods-luckyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				675B486C25940F06006B1888 /* Offres.swift */,
+				675B49A82597928E006B1888 /* OfferDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,8 +372,17 @@
 			children = (
 				675B49962596B401006B1888 /* OfferDetailsViewController.storyboard */,
 				675B499B2596B42F006B1888 /* OfferDetailsViewController.swift */,
+				675B49AD25979306006B1888 /* ViewModel */,
 			);
 			path = OfferDetails;
+			sourceTree = "<group>";
+		};
+		675B49AD25979306006B1888 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7A76977E2AFE58C4BF16D896 /* Frameworks */ = {
@@ -593,8 +607,10 @@
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
 				675B48D7259627DD006B1888 /* AppColors.swift in Sources */,
 				675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */,
+				675B49A92597928E006B1888 /* OfferDetails.swift in Sources */,
 				675B486D25940F06006B1888 /* Offres.swift in Sources */,
 				675B486825940895006B1888 /* LuckyService.swift in Sources */,
+				675B49AF2597931F006B1888 /* OfferDetailsViewModel.swift in Sources */,
 				675B48DC25962EEB006B1888 /* AppImage.swift in Sources */,
 				675B499C2596B42F006B1888 /* OfferDetailsViewController.swift in Sources */,
 				675B498E2596B21E006B1888 /* Int+LuckyApp.swift in Sources */,

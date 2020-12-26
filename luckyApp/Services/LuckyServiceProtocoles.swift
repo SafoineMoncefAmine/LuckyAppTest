@@ -12,5 +12,5 @@ protocol OffersServiceProtocol {
 }
 
 protocol OfferDetailsServiceProtocol {
-    func offreDetails(completion: @escaping (AFResult<Offers>) -> Void)
+    func offreDetails(id: Int, completion: @escaping (AFResult<OfferDetails>) -> Void)
 }

@@ -22,7 +22,10 @@ extension LuckyService: OffersServiceProtocol {
 }
 
 extension LuckyService: OfferDetailsServiceProtocol {
-    func offreDetails(completion: @escaping (AFResult<Offers>) -> Void) {
-        
+    func offreDetails(id: Int, completion: @escaping (AFResult<OfferDetails>) -> Void) {
+        let router = LuckyRouter.offerDetails(id: id)
+        AF.request(router).responseDecodable { (response: DataResponse<OfferDetails, AFError>) in
+            completion(response.result)
+        }
     }
 }
