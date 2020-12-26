@@ -8,7 +8,7 @@
 import UIKit
 
 class OfferDetailsViewController: UIViewController, StoryboardBased {
-
+    
     // MARK: Properties - Outlets
     
     @IBOutlet private weak var tableView: UITableView!
@@ -35,6 +35,7 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
         self.tableView.dataSource = self
         self.tableView.registerCell(name: OfferImageTableViewCell.className)
         self.tableView.registerCell(name: OfferContentInfosTableViewCell.className)
+        self.tableView.registerCell(name: OfferPriceTableViewCell.className)
     }
 }
 
@@ -42,7 +43,7 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
 
 extension OfferDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,6 +53,9 @@ extension OfferDetailsViewController: UITableViewDataSource {
         } else if indexPath.row == 1 {
             let offerInfos = self.data?.infos
             return self.tableView(tableView, offerInfosCellForRowAt: indexPath, with: offerInfos)
+        } else if indexPath.row == 2 {
+            let offerPricesInfos = self.data?.priceData
+            return self.tableView(tableView, offerInfosCellForRowAt: indexPath, with: offerPricesInfos)
         } else {
             return UITableViewCell()
         }
@@ -67,6 +71,12 @@ extension OfferDetailsViewController: UITableViewDataSource {
     
     private func tableView(_ tableView: UITableView, offerInfosCellForRowAt indexPath: IndexPath, with data: OfferDetailContentInfosData?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferContentInfosTableViewCell.className, for: indexPath) as? OfferContentInfosTableViewCell else { return UITableViewCell() }
+        cell.data = data
+        return cell
+    }
+    
+    private func tableView(_ tableView: UITableView, offerInfosCellForRowAt indexPath: IndexPath, with data: OfferDetailPriceInfoData?) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferPriceTableViewCell.className, for: indexPath) as? OfferPriceTableViewCell else { return UITableViewCell() }
         cell.data = data
         return cell
     }

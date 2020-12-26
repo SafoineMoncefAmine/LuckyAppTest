@@ -13,6 +13,8 @@ public enum AppText: String {
     
     case offers_title, offers_count_K, offers_count_description
     
+    case offer_details_price, offer_details_redemptions
+    
     public func value() -> String {
         return self.rawValue.localized
     }

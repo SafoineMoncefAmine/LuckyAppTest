@@ -13,5 +13,5 @@
 "offers_title" = "Offers";
 // MARK: - Offer Details
 
-"offer_details_price" = "Price";
+"offer_details_price" = "PRICE";
 "offer_details_redemptions" = "REDEMPTIONS CAP: ";

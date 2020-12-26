@@ -35,7 +35,13 @@ class OfferDetailsViewModel {
                                                              topRightFavText: value.favoriteCount.shortPresentation(),
                                                              middleTitle: value.title,
                                                              bottomDescription: value.offerDetailsDescription)
-                let data = OfferDetailsMetaData(imageURL: url, infos: offerInfos)
+                let offerPrice = OfferDetailPriceInfoData(title: AppText.offer_details_price.value(),
+                                                          oldPrice: value.price.old,
+                                                          newPrice: value.price.new,
+                                                          expirationDate: value.expiration)
+                let data = OfferDetailsMetaData(imageURL: url,
+                                                infos: offerInfos,
+                                                priceData: offerPrice)
                 completion(data)
             case .failure:
                 print("error")
