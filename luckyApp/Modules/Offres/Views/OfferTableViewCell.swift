@@ -40,7 +40,7 @@ class OfferTableViewCell: UITableViewCell {
     private func affectData() {
         guard let data = self.data else { return }
         
-        self.topLabel.text = data.title
+        self.topLabel.text = data.title.uppercased()
         self.centerLabel.text = data.description
         self.bottomLabel.text = data.tag
         self.favIconImageView.image = data.favoritesIcon.value()
