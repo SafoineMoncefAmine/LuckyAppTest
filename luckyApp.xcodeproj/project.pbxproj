@@ -46,6 +46,8 @@
 		675B49A92597928E006B1888 /* OfferDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49A82597928E006B1888 /* OfferDetails.swift */; };
 		675B49AF2597931F006B1888 /* OfferDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */; };
 		675B49B52597983B006B1888 /* OfferDetailsMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */; };
+		675B49C22597C140006B1888 /* OfferImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */; };
+		675B49C32597C140006B1888 /* OfferImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		675B49A82597928E006B1888 /* OfferDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetails.swift; sourceTree = "<group>"; };
 		675B49AE2597931F006B1888 /* OfferDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewModel.swift; sourceTree = "<group>"; };
 		675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsMetaData.swift; sourceTree = "<group>"; };
+		675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferImageTableViewCell.swift; sourceTree = "<group>"; };
+		675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferImageTableViewCell.xib; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B30C59909BD742A340174C /* Pods-luckyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp.debug.xcconfig"; path = "Target Support Files/Pods-luckyApp/Pods-luckyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -400,6 +404,8 @@
 		675B49BC2597B703006B1888 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */,
+				675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				675B493D2596846E006B1888 /* SFProText-Regular.ttf in Resources */,
 				675B47D42593DF85006B1888 /* LaunchScreen.storyboard in Resources */,
 				675B494925968BE5006B1888 /* TopHeaderTableViewCell.xib in Resources */,
+				675B49C32597C140006B1888 /* OfferImageTableViewCell.xib in Resources */,
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
 				675B493125967910006B1888 /* OfferTableViewCell.xib in Resources */,
 				675B47CF2593DF83006B1888 /* OffresViewController.storyboard in Resources */,
@@ -625,6 +632,7 @@
 				675B48E4259631CA006B1888 /* AppText.swift in Sources */,
 				675B49B52597983B006B1888 /* OfferDetailsMetaData.swift in Sources */,
 				675B47CC2593DF83006B1888 /* OffresViewController.swift in Sources */,
+				675B49C22597C140006B1888 /* OfferImageTableViewCell.swift in Sources */,
 				675B48D7259627DD006B1888 /* AppColors.swift in Sources */,
 				675B48632593FEAF006B1888 /* LuckyRouter.swift in Sources */,
 				675B49A92597928E006B1888 /* OfferDetails.swift in Sources */,

@@ -23,9 +23,18 @@ class OfferDetailsViewModel {
     
     // MARK: Methodes - public
     
-    func loadOfferDetails() {
+    func loadOfferDetails(completion: @escaping (OfferDetailsMetaData) -> Void) {
         self.service.offreDetails(id: self.offerID) { (results) in
-            print(results)
+            switch results {
+            case .success(let value):
+                if let url = URL(string: value.imageURL) {
+                    let data = OfferDetailsMetaData(imageURL: url)
+                    completion(data)
+                }
+            case .failure(let error):
+                print("error")
+            }
+
         }
     }
 }
