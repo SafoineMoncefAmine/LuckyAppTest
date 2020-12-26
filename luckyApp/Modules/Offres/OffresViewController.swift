@@ -36,6 +36,10 @@ class OffresViewController: UIViewController, StoryboardBased {
         }
     }
     
+    deinit {
+        log.info()
+    }
+    
     // MARK: Methodes - Handlers
     
     private func setupUI() {

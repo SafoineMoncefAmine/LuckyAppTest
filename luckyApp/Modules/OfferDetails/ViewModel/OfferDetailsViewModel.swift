@@ -29,8 +29,8 @@ class OfferDetailsViewModel {
             case .success(let value):
                 let data = self.buildOfferDetailsData(offer: value)
                 completion(data)
-            case .failure:
-                print("error")
+            case .failure(let error):
+                log.error(error.errorDescription)
             }
         }
     }

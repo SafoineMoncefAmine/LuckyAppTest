@@ -31,7 +31,7 @@ class OffresViewModel {
                 self?.offers = value
                 completion(strongSelf.buildOfferMetaData(offers: value))
             case .failure(let error):
-                print(error)
+                log.error(error.errorDescription)
             }
             
         }

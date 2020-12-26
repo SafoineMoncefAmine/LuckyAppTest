@@ -11,11 +11,11 @@ class OfferContentInfosTableViewCell: UITableViewCell {
     
     // MARK: Properties - Outlets
     
-    @IBOutlet weak var brandLabel: UILabel!
-    @IBOutlet weak var favIconImageView: UIImageView!
-    @IBOutlet weak var favoriteCountLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var brandLabel: UILabel!
+    @IBOutlet private weak var favIconImageView: UIImageView!
+    @IBOutlet private weak var favoriteCountLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     // MARK: Properties - public
     
@@ -24,6 +24,7 @@ class OfferContentInfosTableViewCell: UITableViewCell {
             self.affectData()
         }
     }
+    
     // MARK: Methodes - life cycle
     
     override func awakeFromNib() {

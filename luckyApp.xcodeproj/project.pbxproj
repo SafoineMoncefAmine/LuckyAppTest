@@ -239,8 +239,8 @@
 		675B48082593E147006B1888 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				675B486C25940F06006B1888 /* Offres.swift */,
 				675B49A82597928E006B1888 /* OfferDetails.swift */,
+				675B486C25940F06006B1888 /* Offres.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,9 +383,9 @@
 		675B493B25968437006B1888 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				675B4960259694C3006B1888 /* SFProText-Bold.ttf */,
 				675B49CE2597D74C006B1888 /* SFProText-Light.ttf */,
 				675B49652596950C006B1888 /* SFProText-Medium.ttf */,
-				675B4960259694C3006B1888 /* SFProText-Bold.ttf */,
 				675B493C2596846E006B1888 /* SFProText-Regular.ttf */,
 			);
 			path = Font;

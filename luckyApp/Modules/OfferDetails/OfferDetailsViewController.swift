@@ -31,6 +31,10 @@ class OfferDetailsViewController: UIViewController, StoryboardBased {
         }
     }
     
+    deinit {
+        log.info()
+    }
+    
     // MARK: Methodes - private - setups
     
     private func setupTableView() {
