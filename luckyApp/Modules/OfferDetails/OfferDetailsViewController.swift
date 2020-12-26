@@ -57,7 +57,7 @@ extension OfferDetailsViewController: UITableViewDataSource {
         } else if indexPath.row == 2 {
             let offerPricesInfos = self.data?.priceData
             return self.tableView(tableView, offerPricesInfosCellForRowAt: indexPath, with: offerPricesInfos)
-        } else if indexPath.row == 3  {
+        } else if indexPath.row == 3 {
             let redemtionData = self.data?.redemptionText
             return self.tableView(tableView, redemptionInfosCellForRowAt: indexPath, with: redemtionData)
         } else {

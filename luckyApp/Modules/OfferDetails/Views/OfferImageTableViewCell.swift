@@ -9,14 +9,20 @@ import UIKit
 import SDWebImage
 
 class OfferImageTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var offerImageView: UIImageView!
+    
+    // MARK: Properties - Outlets
+    
+    @IBOutlet private weak var offerImageView: UIImageView!
+    
+    // MARK: Properties - public
     
     var data: URL? {
         didSet {
             self.offerImageView.sd_setImage(with: self.data, completed: nil)
         }
     }
+    
+    // MARK: Methodes - life cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()

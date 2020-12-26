@@ -8,7 +8,7 @@
 import UIKit
 
 class TopHeaderTableViewCell: UITableViewCell {
-
+    
     // MARK: Properties - Outlets
     
     @IBOutlet private weak var titleLabel: UILabel!

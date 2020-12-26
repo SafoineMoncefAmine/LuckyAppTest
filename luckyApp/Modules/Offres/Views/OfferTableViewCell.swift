@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class OfferTableViewCell: UITableViewCell {
-
+    
     // MARK: - Properties - Outlets
     
     @IBOutlet private weak var offerImageView: UIImageView!
@@ -27,7 +27,7 @@ class OfferTableViewCell: UITableViewCell {
             self.affectData()
         }
     }
-        
+    
     // MARK: - Methodes - lifecycle
     
     override func awakeFromNib() {

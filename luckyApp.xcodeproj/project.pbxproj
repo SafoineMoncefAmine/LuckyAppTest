@@ -328,10 +328,10 @@
 			isa = PBXGroup;
 			children = (
 				675B494D25968F89006B1888 /* OfferSectionHeaderTableViewCell.swift */,
-				675B492E25967910006B1888 /* OfferTableViewCell.swift */,
-				675B494625968BE5006B1888 /* TopHeaderTableViewCell.swift */,
 				675B494E25968F89006B1888 /* OfferSectionHeaderTableViewCell.xib */,
+				675B492E25967910006B1888 /* OfferTableViewCell.swift */,
 				675B492F25967910006B1888 /* OfferTableViewCell.xib */,
+				675B494625968BE5006B1888 /* TopHeaderTableViewCell.swift */,
 				675B494725968BE5006B1888 /* TopHeaderTableViewCell.xib */,
 			);
 			path = Views;

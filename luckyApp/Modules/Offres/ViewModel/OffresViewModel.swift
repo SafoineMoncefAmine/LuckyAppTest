@@ -80,6 +80,7 @@ class OffresViewModel {
                                            favoritesIcon: favIcon,
                                            favoritesCount: favoriteCount))
         }
+        
         return OfferSectionMetaData(title: section.title, items: items)
     }
 }

@@ -27,23 +27,7 @@ class OfferDetailsViewModel {
         self.service.offreDetails(id: self.offerID) { (results) in
             switch results {
             case .success(let value):
-                guard let url = URL(string: value.imageURL) else {
-                    return
-                }
-                let offerInfos = OfferDetailContentInfosData(topTitle: value.brand,
-                                                             topRightIcon: AppImage.ic_favorited,
-                                                             topRightFavText: value.favoriteCount.shortPresentation(),
-                                                             middleTitle: value.title,
-                                                             bottomDescription: value.offerDetailsDescription)
-                let offerPrice = OfferDetailPriceInfoData(oldPrice: value.price.old,
-                                                          newPrice: value.price.new,
-                                                          expirationDate: value.expiration)
-                
-                let redemptionText = AppText.offer_details_redemptions.value() + value.redemptionsCap
-                let data = OfferDetailsMetaData(imageURL: url,
-                                                infos: offerInfos,
-                                                priceData: offerPrice,
-                                                redemptionText: redemptionText)
+                let data = self.buildOfferDetailsData(offer: value)
                 completion(data)
             case .failure:
                 print("error")
