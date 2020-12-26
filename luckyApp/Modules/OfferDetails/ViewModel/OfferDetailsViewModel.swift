@@ -27,11 +27,17 @@ class OfferDetailsViewModel {
         self.service.offreDetails(id: self.offerID) { (results) in
             switch results {
             case .success(let value):
-                if let url = URL(string: value.imageURL) {
-                    let data = OfferDetailsMetaData(imageURL: url)
-                    completion(data)
+                guard let url = URL(string: value.imageURL) else {
+                    return
                 }
-            case .failure(let error):
+                let offerInfos = OfferDetailContentInfosData(topTitle: value.brand,
+                                                             topRightIcon: AppImage.ic_favorited,
+                                                             topRightFavText: value.favoriteCount.shortPresentation(),
+                                                             middleTitle: value.title,
+                                                             bottomDescription: value.offerDetailsDescription)
+                let data = OfferDetailsMetaData(imageURL: url, infos: offerInfos)
+                completion(data)
+            case .failure:
                 print("error")
             }
 

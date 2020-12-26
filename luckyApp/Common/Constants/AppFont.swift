@@ -12,7 +12,7 @@ public enum AppFont: String {
     case sfProTextRegular = "SFProText-Regular"
     case SFProTextBold = "SFProText-Bold"
     case SFProTextMedium = "SFProText-Medium"
-    
+    case SFProTextLight = "SFProText-Light"
     // MARK: Methods - internal - utilities
     
     public func value(size: Int = 17) -> UIFont {

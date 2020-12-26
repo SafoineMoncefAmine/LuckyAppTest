@@ -48,6 +48,9 @@
 		675B49B52597983B006B1888 /* OfferDetailsMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */; };
 		675B49C22597C140006B1888 /* OfferImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */; };
 		675B49C32597C140006B1888 /* OfferImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */; };
+		675B49C92597CC61006B1888 /* OfferContentInfosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B49C72597CC61006B1888 /* OfferContentInfosTableViewCell.swift */; };
+		675B49CA2597CC61006B1888 /* OfferContentInfosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675B49C82597CC61006B1888 /* OfferContentInfosTableViewCell.xib */; };
+		675B49CF2597D74C006B1888 /* SFProText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675B49CE2597D74C006B1888 /* SFProText-Light.ttf */; };
 		AA67ECF8A10A05D9C068F4D1 /* Pods_luckyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +120,9 @@
 		675B49B42597983B006B1888 /* OfferDetailsMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsMetaData.swift; sourceTree = "<group>"; };
 		675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferImageTableViewCell.swift; sourceTree = "<group>"; };
 		675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferImageTableViewCell.xib; sourceTree = "<group>"; };
+		675B49C72597CC61006B1888 /* OfferContentInfosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferContentInfosTableViewCell.swift; sourceTree = "<group>"; };
+		675B49C82597CC61006B1888 /* OfferContentInfosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferContentInfosTableViewCell.xib; sourceTree = "<group>"; };
+		675B49CE2597D74C006B1888 /* SFProText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Light.ttf"; sourceTree = "<group>"; };
 		BA90AF55D74BEE2FF35987AD /* Pods_luckyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_luckyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B30C59909BD742A340174C /* Pods-luckyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-luckyApp.debug.xcconfig"; path = "Target Support Files/Pods-luckyApp/Pods-luckyApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -366,6 +372,7 @@
 		675B493B25968437006B1888 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				675B49CE2597D74C006B1888 /* SFProText-Light.ttf */,
 				675B49652596950C006B1888 /* SFProText-Medium.ttf */,
 				675B4960259694C3006B1888 /* SFProText-Bold.ttf */,
 				675B493C2596846E006B1888 /* SFProText-Regular.ttf */,
@@ -406,6 +413,8 @@
 			children = (
 				675B49C02597C140006B1888 /* OfferImageTableViewCell.swift */,
 				675B49C12597C140006B1888 /* OfferImageTableViewCell.xib */,
+				675B49C72597CC61006B1888 /* OfferContentInfosTableViewCell.swift */,
+				675B49C82597CC61006B1888 /* OfferContentInfosTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,10 +548,12 @@
 				675B494925968BE5006B1888 /* TopHeaderTableViewCell.xib in Resources */,
 				675B49C32597C140006B1888 /* OfferImageTableViewCell.xib in Resources */,
 				675B47D12593DF85006B1888 /* Assets.xcassets in Resources */,
+				675B49CA2597CC61006B1888 /* OfferContentInfosTableViewCell.xib in Resources */,
 				675B493125967910006B1888 /* OfferTableViewCell.xib in Resources */,
 				675B47CF2593DF83006B1888 /* OffresViewController.storyboard in Resources */,
 				675B4961259694C3006B1888 /* SFProText-Bold.ttf in Resources */,
 				675B49972596B401006B1888 /* OfferDetailsViewController.storyboard in Resources */,
+				675B49CF2597D74C006B1888 /* SFProText-Light.ttf in Resources */,
 				675B495025968F89006B1888 /* OfferSectionHeaderTableViewCell.xib in Resources */,
 				675B49662596950C006B1888 /* SFProText-Medium.ttf in Resources */,
 			);
@@ -654,6 +665,7 @@
 				675B48CE25962614006B1888 /* OfferCellMetaData.swift in Sources */,
 				675B490825965AC4006B1888 /* NSObject+LuckyApp.swift in Sources */,
 				675B48FE259636F8006B1888 /* OfferMetaData.swift in Sources */,
+				675B49C92597CC61006B1888 /* OfferContentInfosTableViewCell.swift in Sources */,
 				675B49A425978D57006B1888 /* LuckyServiceProtocoles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

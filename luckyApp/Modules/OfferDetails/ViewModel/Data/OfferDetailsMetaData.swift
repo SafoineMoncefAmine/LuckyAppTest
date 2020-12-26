@@ -9,4 +9,13 @@ import Foundation
 
 struct OfferDetailsMetaData {
     let imageURL: URL
+    let infos: OfferDetailContentInfosData
+}
+
+struct OfferDetailContentInfosData {
+    let topTitle: String
+    let topRightIcon: AppImage
+    let topRightFavText: String
+    let middleTitle: String
+    let bottomDescription: String
 }
