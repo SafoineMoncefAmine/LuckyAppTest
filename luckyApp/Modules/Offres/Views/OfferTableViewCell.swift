@@ -8,6 +8,10 @@
 import UIKit
 import SDWebImage
 
+protocol OfferTableViewCellDelegate: class {
+    func didSelectItem()
+}
+
 class OfferTableViewCell: UITableViewCell {
 
     // MARK: - Properties - Outlets
@@ -28,11 +32,14 @@ class OfferTableViewCell: UITableViewCell {
         }
     }
     
+    weak var delegate: OfferTableViewCellDelegate?
+    
     // MARK: - Methodes - lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupUI()
+        self.setupGestures()
     }
     
     // MARK: - Methodes - Handlers
@@ -48,7 +55,7 @@ class OfferTableViewCell: UITableViewCell {
         self.imageView?.sd_setImage(with: data.imageUrl, completed: nil)
     }
     
-    func setupUI() {
+    private func setupUI() {
         self.topLabel.textColor = AppColor.grayscale600.value()
         self.topLabel.font = AppFont.sfProTextRegular.value(size: 10)
         
@@ -64,5 +71,14 @@ class OfferTableViewCell: UITableViewCell {
         
         self.imageView?.contentMode = .scaleAspectFit
         self.imageView?.layer.cornerRadius = 2
+    }
+    
+    private func setupGestures() {
+        let tapGestures = UITapGestureRecognizer(target: self, action: #selector(self.cellTapped))
+        self.addGestureRecognizer(tapGestures)
+    }
+    
+    @objc private func cellTapped() {
+        self.delegate?.didSelectItem()
     }
 }

@@ -50,8 +50,11 @@ class OffresViewController: UIViewController, StoryboardBased {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension OffresViewController: UITableViewDataSource {
     
+    // MARK: TableView DataSource methodes
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let data = self.data else {return 0}
         return data.sections.count + 1
@@ -78,6 +81,8 @@ extension OffresViewController: UITableViewDataSource {
         }
     }
     
+    // MARK: tableview cell creation
+    
     private func tableView(_ tableView: UITableView, topHeaderCellForRowAt indexPath: IndexPath, with data: String?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TopHeaderTableViewCell.className, for: indexPath) as? TopHeaderTableViewCell else { return UITableViewCell() }
         cell.data = data
@@ -93,6 +98,17 @@ extension OffresViewController: UITableViewDataSource {
     private func tableView(_ tableView: UITableView, offerViewCellForRowAt indexPath: IndexPath, with data: OfferCellMetaData?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OfferTableViewCell.className, for: indexPath) as? OfferTableViewCell else { return UITableViewCell() }
         cell.data = data
+        cell.delegate = self
         return cell
+    }
+}
+
+// MARK: - OfferTableViewCellDelegate
+
+extension OffresViewController: OfferTableViewCellDelegate {
+    func didSelectItem() {
+        print("Tapped")
+        let offerDetailsVC = OfferDetailsViewController.instanciate()
+        self.navigationController?.pushViewController(offerDetailsVC, animated: true)
     }
 }
