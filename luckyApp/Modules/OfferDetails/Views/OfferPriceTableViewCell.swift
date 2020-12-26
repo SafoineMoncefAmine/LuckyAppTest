@@ -15,6 +15,7 @@ class OfferPriceTableViewCell: UITableViewCell {
     @IBOutlet private weak var oldPriceLabel: UILabel!
     @IBOutlet private weak var newPriceLabel: UILabel!
     @IBOutlet private weak var expirationDateLabel: UILabel!
+    @IBOutlet private weak var oldPriceStrikeLine: UIView!
     
     // MARK: Properties - public
     
@@ -46,6 +47,7 @@ class OfferPriceTableViewCell: UITableViewCell {
         self.titleLabel.font = AppFont.sfProTextRegular.value(size: 10)
         
         self.oldPriceLabel.textColor = AppColor.grayscale500.value()
+        self.oldPriceStrikeLine.backgroundColor = AppColor.grayscale500.value()
         self.oldPriceLabel.font = AppFont.sfProTextRegular.value(size: 14)
         
         self.newPriceLabel.textColor = AppColor.grayscale800.value()

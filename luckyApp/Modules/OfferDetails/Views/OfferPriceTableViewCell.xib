@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +23,7 @@
                         <rect key="frame" x="25" y="0.0" width="292" height="56"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZxC-Y9-dbt">
-                                <rect key="frame" x="0.0" y="1" width="96" height="55"/>
+                                <rect key="frame" x="0.0" y="0.0" width="136" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-i6-uk4">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -31,16 +32,38 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-6h-lqq">
-                                        <rect key="frame" x="0.0" y="34.5" width="96" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="34.5" width="136" height="21.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwM-Ie-Mtb">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-oi-VrW">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.5" height="21.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwM-Ie-Mtb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XS-Ad-XFX">
+                                                        <rect key="frame" x="0.0" y="10.5" width="81.5" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="mbi-qz-jL0"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="MwM-Ie-Mtb" firstAttribute="top" secondItem="uVH-oi-VrW" secondAttribute="top" id="D2A-0h-vqr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MwM-Ie-Mtb" secondAttribute="bottom" id="OQ3-On-X3M"/>
+                                                    <constraint firstItem="7XS-Ad-XFX" firstAttribute="centerY" secondItem="uVH-oi-VrW" secondAttribute="centerY" id="Ock-jl-O79"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7XS-Ad-XFX" secondAttribute="trailing" id="jpf-ew-9dY"/>
+                                                    <constraint firstItem="MwM-Ie-Mtb" firstAttribute="leading" secondItem="uVH-oi-VrW" secondAttribute="leading" id="kBG-qO-NeB"/>
+                                                    <constraint firstItem="7XS-Ad-XFX" firstAttribute="leading" secondItem="uVH-oi-VrW" secondAttribute="leading" id="tQ5-he-YWm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MwM-Ie-Mtb" secondAttribute="trailing" id="uBB-cO-aoY"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5h-jA-VeY">
-                                                <rect key="frame" x="54.5" y="0.0" width="41.5" height="20.5"/>
+                                                <rect key="frame" x="94.5" y="0.5" width="41.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -70,9 +93,15 @@
                 <outlet property="expirationDateLabel" destination="ms6-Ta-3LR" id="VLY-OF-S2f"/>
                 <outlet property="newPriceLabel" destination="z5h-jA-VeY" id="uOP-yT-AX5"/>
                 <outlet property="oldPriceLabel" destination="MwM-Ie-Mtb" id="RKG-Kd-7WB"/>
+                <outlet property="oldPriceStrikeLine" destination="7XS-Ad-XFX" id="tL2-nR-VI1"/>
                 <outlet property="titleLabel" destination="hc1-i6-uk4" id="iRb-Fh-UXL"/>
             </connections>
             <point key="canvasLocation" x="21.739130434782609" y="113.83928571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
