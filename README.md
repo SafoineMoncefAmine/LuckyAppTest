@@ -1,5 +1,7 @@
 # LuckyAppTest
 
+<img src="lucky-gif.gif" width="300" height="600"/>
+
 ## Pre-Requisites
 This Assesement has been developed with Swift 5.1, Xcode 12.2 and CocoaPods  1.12.2. So you must have Xcode install on your computer and be sure you have the last version of Cocoa pod install on your computer. To check if pod is available, lauch the following command :
 ```

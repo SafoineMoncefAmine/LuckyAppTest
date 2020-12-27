@@ -38,7 +38,7 @@ enum LuckyRouter: URLRequestConvertible {
     
 }
 
-// MARK: - TucanoRouter - path
+// MARK: - LuckyRouter - path
 
 extension LuckyRouter {
     var path: String {
@@ -51,7 +51,7 @@ extension LuckyRouter {
     }
 }
 
-// MARK: - TucanoRouter - parameters
+// MARK: - LuckyRouter - parameters
 
 extension LuckyRouter {
     
@@ -63,7 +63,7 @@ extension LuckyRouter {
     }
 }
 
-// MARK: - TucanoRouter - headers
+// MARK: - LuckyRouter - headers
 
 extension LuckyRouter {
     
@@ -75,7 +75,7 @@ extension LuckyRouter {
     }
 }
 
-// MARK: - TucanoRouter - HTTPMethod
+// MARK: - LuckyRouter - HTTPMethod
 
 extension LuckyRouter {
     var method: HTTPMethod {
@@ -86,7 +86,7 @@ extension LuckyRouter {
     }
 }
 
-// MARK: - TucanoRouter - parameter encoding
+// MARK: - LuckyRouter - parameter encoding
 
 extension LuckyRouter {
     var parameterEncoding: ParameterEncoding {
