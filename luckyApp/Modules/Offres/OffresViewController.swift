@@ -72,20 +72,20 @@ extension OffresViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let data = self.data else {return 0}
-        if section == 0 { // first section contains only the top header
+        if section == 0 { // NOTE: first section contains only the top header
             return 1
         } else {
-            return data.sections[section - 1].items.count + 1 // we add 1 for each section header
+            return data.sections[section - 1].items.count + 1 // NOTE: we add 1 for each section header
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 { // this for top header
+        if indexPath.section == 0 { // NOTE: this for top header
             return self.tableView(tableView, topHeaderCellForRowAt: indexPath, with: self.data?.offersCount)
-        } else if indexPath.row == 0 { // this for section header
+        } else if indexPath.row == 0 { // NOTE: this for section header
             let cellData = self.data?.sections[indexPath.section - 1].title
             return self.tableView(tableView, sectionHeaderCellForRowAt: indexPath, with: cellData)
-        } else { // this for offer cell
+        } else { // NOTE:this for offer cell
             let cellData = self.data?.sections[indexPath.section - 1].items[indexPath.row - 1]
             return self.tableView(tableView, offerViewCellForRowAt: indexPath, with: cellData)
         }
@@ -118,8 +118,9 @@ extension OffresViewController: UITableViewDataSource {
 extension OffresViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.section != 0, indexPath.row != 0 else { return }
-        guard let itemID = self.viewModel.getIDForItem(section: indexPath.section - 1, row: indexPath.row - 1) else { // reduce 1 for first cells that represent the headers
+        guard let itemID = self.viewModel.getIDForItem(section: indexPath.section - 1, row: indexPath.row - 1) else { // NOTE: reduce 1 for first cells that represent the headers
             // TODO: handle case where offerID is nil
+            log.warning("can't find offerID for the selected offer")
             return
         }
         let offerDetailsVC = OfferDetailsViewController.instanciate()
