@@ -52,21 +52,22 @@ A ViewModel role is to interact with a View, thanks to Model and Services.  More
 
 **Important:** All data exchange between ViewModels and Views are basic types (String, Int, Bool, etc.) or data stuct.
 
-**Important:** All strings and images should be implement here and not in View layer, even if it's static ones. For Font and Color, the best solution stay to manage them in ViewModel layer.
+**Important:** All strings and images should be implement here and not in View layer, even if it's static ones.
 
 ### Views
-This folder contains all View layer components, mostly UIViewController and UIView. In the Commom folder, there are all UIViews and UIViewControllers classes that are sharing by different others View component. They are mostly `UIKit` components.
+This folder contains all View layer components, mostly UIViewController and UIView, They are mostly `UIKit` components.
 
 **Important:** We decided to not using segue all over the app. So each `storyboard` file represents a unique `UIViewController`, that is compliant with `StoryboardBased` protocol to instantiate it easilier. Moreover the "Is Initial View Controller" option should be activate for the storyboard.
 
 ### Extensions
-As it's name suggests, this folder contains only Extension for iOS SDK or pod files classes and structures, and where scope of the extension is global. When the scope of an extension concern only one file (like player for instance) extension is directly declared in the file
+As it's name suggests, this folder contains only Extension for iOS SDK or pod files classes and structures, and where scope of the extension is global.
 
 ### Ressources
 This folder contains all files and document that are not common iOS/swift files (these common files ended with `.swift`). It's here that we have the `Localizable.strings` or `Assets.xcassets` files for exemple. All the `.plist` adn `.ttf`   will be there too.
 
 
 ### Unit testing
+// not yet implemented
 
 ## Comments
 Comments are present all over the project to explain some piece of code, to do work or improvement that could come later. Some comments are prefixed with a specific syntax for a specific meanning :
